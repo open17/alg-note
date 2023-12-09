@@ -11,16 +11,16 @@
 注意update下面是增加x,不是更新为x
 
 >>> update(1,1,3);update(2,2,3);update(3,3,3)
->>> querys(1,1)
+>>> query(1,1)
 1
->>> querys(1,3)
+>>> query(1,3)
 6
->>> querys(2,3)
+>>> query(2,3)
 5
 >>> update(2,-2,3)
->>> querys(2,3)
+>>> query(2,3)
 3
->>> querys(1,2)
+>>> query(1,2)
 1
 """
 
@@ -35,17 +35,17 @@ def update(x,val,n):
         tree[x]+=val
         x+=lowbit(x)
 
-def query(x):
+def _query(x):
     res=0
     while x>0:
         res+=tree[x]
         x-=lowbit(x)
     return res
 
-def querys(x,y):
+def query(x,y):
     if x<y:
-        return query(y)-query(x-1)
-    return query(x)-query(y-1)
+        return _query(y) - _query(x-1)
+    return _query(x) - _query(y-1)
 
 if __name__ == "__main__":
     import doctest
