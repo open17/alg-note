@@ -1,0 +1,35 @@
+"""
+并查集常用于维护一种传递关系
+这里只写路径压缩,
+因为很多时候题目需要按照某种特殊的顺序合并(非秩的顺序)
+按秩合并加一个rank数组即可
+
+>>> init(5)
+>>> union(1,2)
+>>> union(2,4)
+>>> check(1,4)
+True
+>>> check(2,1)
+True
+>>> check(2,3)
+False
+"""
+
+N=1e5+2
+uf=[0]*int(N)
+def init(n):
+    for i in range(n):
+        uf[i]=i
+def find(x):
+    if uf[x]!=x:
+        uf[x]=find(uf[x])
+    return uf[x]
+def union(x,y):
+    uf[find(x)]=find(y)
+def check(x,y):
+    return find(x)==find(y)
+    
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
