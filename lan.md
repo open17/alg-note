@@ -187,8 +187,8 @@ python的str可以直接比较字典序
 from decimal import Decimal, getcontext
 getcontext().prec = 20
 ```
-
-
+### 负数取余
+python负数取余为正数,无需处理
 
 
 [^1]: 2023CCPC哈尔滨站血痛的教训
