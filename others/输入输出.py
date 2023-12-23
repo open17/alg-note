@@ -40,3 +40,20 @@ def for_t(func):
 @for_t
 def solve():
     pass
+
+
+# def read():
+#     """
+#     似乎有点问题
+#     """
+#     x = 0
+#     f = 1
+#     ch = sys.stdin.buffer.read(1).decode()
+#     while ch < '0' or ch > '9':
+#         if ch == '-':
+#             f = -1
+#         ch = sys.stdin.buffer.read(1).decode()
+#     while ch >= '0' and ch <= '9':
+#         x = x * 10 + int(ch)
+#         ch = sys.stdin.buffer.read(1).decode()
+#     return x * f
