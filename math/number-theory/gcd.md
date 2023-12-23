@@ -10,7 +10,7 @@ from math import gcd,lcm
 
 对于给定的值：0 ≤ m < n 计算 gcd(m, n)，可以用到以下递归式：
 $$gcd(0, n) = n$$
-$$gcd(m, n) = gcd(n \% m, m), m > 0$$
+$$gcd(m, n) = gcd(n \bmod m), m > 0$$
 时间复杂度：O(log n)
 
 
