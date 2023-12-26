@@ -21,6 +21,8 @@ __slot__优化
 python的class一般都比较慢,可以加入__slot__来优化
 
 
+使用array替代list,注意array是定内容类型的,比如指定只能int
+
 
 """
 
