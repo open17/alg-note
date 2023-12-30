@@ -3,6 +3,7 @@ B树 利用sqlite3模拟
 由于sqlite3底层是B树
 B树更适合磁盘中的表现,在内存中操作效率不是很高
 给卡常很正常
+下面的代码最初蒯自luogu提交
 """
 import sqlite3
 

@@ -1,19 +1,63 @@
-"""
-AVL 平衡二叉树
-通过四种旋转来维护平衡
-写起来长了点,理解难度还好
-"""
+import re
+import random
 import sys
+from math import ceil,floor,fmod,gcd,sqrt,inf
+from bisect import bisect_left
+from collections import defaultdict,Counter,deque,OrderedDict
+from functools import cache, reduce, cmp_to_key
+from itertools import accumulate, combinations, permutations
+from heapq import nsmallest, nlargest, heappushpop, heapify, heappop, heappush
+from copy import deepcopy
+from typing import *
+from string import ascii_lowercase, ascii_uppercase
+
 if "PyPy" in sys.version:
     import pypyjit; pypyjit.set_param('max_unroll_recursion=-1')
 
-limits = [20000]
+limits = [1000000,500000,200000,100000,50000,20000]
 for limit in limits:
     try:
         sys.setrecursionlimit(limit)
         break
     except:
         continue 
+
+def fstream(func):
+    def wrapper():
+        input_file = open('data.in', 'r')
+        sys.stdin = input_file
+        output_file = open('data.out', 'w')
+        sys.stdout = output_file
+        func()
+        input_file.close()
+        sys.stdin = sys.__stdin__
+        output_file.close()
+        sys.stdout = sys.__stdout__
+    return wrapper
+
+input = lambda: sys.stdin.readline().rstrip("\r\n")
+
+def I():
+    return input()
+ 
+def II():
+    return int(input())
+ 
+def MII():
+    return map(int, input().split())
+ 
+def LI():
+    return list(input().split())
+ 
+def LII():
+    return list(map(int, input().split()))
+
+def for_t(func):
+    def wrapper():
+        T=II()
+        for _ in range(T):
+            func()
+    return wrapper
 
 class AVLNode:
     __slots__ = ('key', 'left', 'right', 'height')
@@ -55,9 +99,12 @@ class AVLTree:
     def __init__(self):
         self.root = None
     def get_height(self, node):
-        return -1 if not node else node.height
+        if not node: return 0
+        return node.height
     def get_balance(self, node):
-        return 0 if not node else self.get_height(node.left) - self.get_height(node.right)
+        if not node:
+            return 0
+        return self.get_height(node.left) - self.get_height(node.right)
     def update_height(self, node):
         if not node:
             return
@@ -113,7 +160,7 @@ class AVLTree:
             return AVLNode(x)
         if x<node.key:
             node.left=self._BST_insert(node.left,x)
-        elif x>node.key:
+        elif x>=node.key:
             node.right=self._BST_insert(node.right,x)
         return node
 
@@ -237,9 +284,36 @@ class AVLTree:
             print(node, end=" ")
             self.print_inorder(node.right)
 
+avl=AVLTree()
 
-if __name__ == "__main__":
-    import doctest
-    doctest.testmod()
+# @fstream
+@for_t
+def solve():
+    opt,x=MII()
+    if opt==1:
+        avl.insert(x)
+    elif opt==2:
+        avl.delete(x)
+    elif opt==3:
+        xx=avl.rank(x)
+        s=avl.get_size(avl.root)
+        k=avl.kth_largest(s-xx+1)
+        if k!=x: xx+=1
+        print(xx)
+    elif opt==4:
+        s=avl.get_size(avl.root)
+        # x 
+        k=avl.kth_largest(s-x+1)
+        print(k)
+    elif opt==5:
+        r=avl.predecessor(x)
+        if not r:
+            r=-1000000000
+        print(r)
+    elif opt==6:
+        r=avl.successor(x)
+        if r is None:
+            r=1000000000
+        print(r)
 
-    
+solve()
