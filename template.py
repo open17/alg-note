@@ -11,8 +11,9 @@ from copy import deepcopy
 from typing import *
 from string import ascii_lowercase, ascii_uppercase
 
-if "PyPy" in sys.version:
-    import pypyjit; pypyjit.set_param('max_unroll_recursion=-1')
+# 可能会导致pypy产生TLE
+# if "PyPy" in sys.version:
+#     import pypyjit; pypyjit.set_param('max_unroll_recursion=-1')
 
 limits = [100000, 10000, 5000, 2000]
 for limit in limits:
