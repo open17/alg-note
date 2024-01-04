@@ -22,16 +22,24 @@ b[l] += c, b[r + 1] -= c
 
 """
 二维前缀和
-b[i, j] = 第i行j列格子左上部分所有元素的和
-b[i][j]=b[i-1][j]+b[i][j-1]-b[i-1][j-1]+a[i][j]
-以(x1, y1)为左上角，(x2, y2)为右下角的子矩阵的和为：
-b[x2][y2] - b[x1 - 1][y2] - b[x2][y1 - 1] + b[x1 - 1][y1 - 1]
+原地trick
 """
-a = [[1, 2, 3],
-     [4, 5, 6],
-     [7, 8, 9]]
-m, n = len(a), len(a[0])
-b = [[0] * (n+1) for _ in range(m+1)]
-for i in range(1, m+1):
-    for j in range(1, n+1):
-        b[i][j] = a[i-1][j-1] + b[i-1][j] + b[i][j-1] - b[i-1][j-1]
+N=5003
+a=[[0] * N for _ in range(N)]
+for i in range(1, N):
+        for j in range(1, N):
+            a[i][j] = a[i][j] + a[i-1][j] + a[i][j-1] - a[i-1][j-1]
+def get(x1,y1,x2,y2):
+    return a[x2][y2] - a[x1 - 1][y2] - a[x2][y1 - 1] + a[x1 - 1][y1 - 1]
+
+"""
+二维差分
+"""
+N = 5003
+a = [[0] * N for _ in range(N)]
+
+def update(x, y, val):
+    a[x][y] += val
+
+def get(x1, y1, x2, y2):
+    return a[x2][y2] - a[x1 - 1][y2] - a[x2][y1 - 1] + a[x1 - 1][y1 - 1]
