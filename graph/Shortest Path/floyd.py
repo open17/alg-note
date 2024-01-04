@@ -16,5 +16,7 @@ def init(n):
 def floyd(n):
     for k in range(n):
         for i in range(n):
+            # 小trick优化剪枝
+            if dist[i][k] == inf: continue
             for j in range(n):
                 dist[i][j]=min(dist[i][j],dist[i][k]+dist[k][j])
