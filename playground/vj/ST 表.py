@@ -1,7 +1,37 @@
-import sys
-import os,math
+import re,os
 from io import BytesIO, IOBase
+import random
+import sys,math
+from math import ceil,floor,fmod,gcd,sqrt,inf
+from bisect import bisect_left
+from collections import defaultdict,Counter,deque,OrderedDict
+from functools import cache, reduce, cmp_to_key
+from itertools import accumulate, combinations, permutations
+from heapq import nsmallest, nlargest, heappushpop, heapify, heappop, heappush
+from copy import deepcopy
+from typing import *
+from string import ascii_lowercase, ascii_uppercase
+# 快读区块大小
 BUFSIZE = 4096
+# 判断是否本地
+local="--open17" in sys.argv
+
+# 可能会导致pypy产生TLE
+# if "PyPy" in sys.version:
+#     import pypyjit; pypyjit.set_param('max_unroll_recursion=-1')
+
+# 调试递归极限
+limits = [100000, 10000, 5000, 2000]
+for limit in limits:
+    try:
+        sys.setrecursionlimit(limit)
+        break
+    except:
+        continue 
+
+
+
+
 class FastIO(IOBase):
     newlines = 0
     def __init__(self, file):
@@ -96,4 +126,4 @@ def solve():
         length=right-left+1
         k=int(math.log2(length))
         print(max(st[left][k], st[right-(1<<k)+1][k]))
-solve(True)
+solve(local)

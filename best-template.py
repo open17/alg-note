@@ -11,11 +11,16 @@ from heapq import nsmallest, nlargest, heappushpop, heapify, heappop, heappush
 from copy import deepcopy
 from typing import *
 from string import ascii_lowercase, ascii_uppercase
+# 快读区块大小
 BUFSIZE = 4096
+# 判断是否本地
+local="--open17" in sys.argv
+
 # 可能会导致pypy产生TLE
 # if "PyPy" in sys.version:
 #     import pypyjit; pypyjit.set_param('max_unroll_recursion=-1')
 
+# 调试递归极限
 limits = [100000, 10000, 5000, 2000]
 for limit in limits:
     try:
@@ -23,6 +28,9 @@ for limit in limits:
         break
     except:
         continue 
+
+
+
 
 class FastIO(IOBase):
     newlines = 0
@@ -100,10 +108,6 @@ def for_t(func):
         for _ in range(T):
             func()
     return wrapper
-
-local=1
-# local=0
-
 
 
 @fstream
