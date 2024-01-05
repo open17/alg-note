@@ -14,7 +14,7 @@ from string import ascii_lowercase, ascii_uppercase
 # 快读区块大小
 BUFSIZE = 4096
 # 判断是否本地
-local="--open17" in sys.argv
+LOCAL="--open17" in sys.argv
 
 # 可能会导致pypy产生TLE
 # if "PyPy" in sys.version:
@@ -116,4 +116,4 @@ def solve():
     pass
 
 
-solve(local)
+solve(LOCAL)

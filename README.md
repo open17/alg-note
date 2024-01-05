@@ -4,6 +4,11 @@
 
 如果没有特殊说明,默认版本`3.8`,编译器`cpython`(一般来说`pypy`也基本检验过)
 
+其中`best-template.py`开启本地测试需要传入`--open17`
+```R
+python best-template.py --open17
+```
+
 ## 模板目录
 ### count
 > 计数相关的数据结构与算法
