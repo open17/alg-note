@@ -123,7 +123,7 @@ python best-template.py --open17
 > 字符串
 - [x]  字典树
 - [ ]  后缀树
-- [ ]  后缀数组
+- [x]  后缀数组
 - [ ]  KMP
 - [ ]  Z函数
 - [ ]  马拉车
