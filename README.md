@@ -206,5 +206,6 @@ python负数取余为正数,无需处理
 
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=enkerewpo&repo=OI-Public-Library)](https://github.com/enkerewpo/OI-Public-Library)
 
+模板中的IOWrapper和FastIO源自CF看到的pypy做法,[原链接](https://codeforces.com/profile/Yawn_Sean)
 
 [^1]: 2023CCPC哈尔滨站血痛的教训
