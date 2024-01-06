@@ -9,6 +9,9 @@
 python best-template.py --open17
 ```
 
+我的c++模板仓库
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=open17&repo=CPP-for-CP)](https://github.com/open17/CPP-for-CP)
+
 ## 模板目录
 ### count
 > 计数相关的数据结构与算法
