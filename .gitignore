@@ -1,2 +1,5 @@
 *.in
 *.out
+tempCodeRunnerFile.py
+*.exe
+*.cpp
