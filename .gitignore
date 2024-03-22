@@ -2,4 +2,5 @@
 *.out
 tempCodeRunnerFile.py
 *.exe
-*.cpp
+docs/.vitepress/cache/*
+node_modules/
