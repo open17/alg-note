@@ -4,22 +4,30 @@ layout: home
 
 hero:
   name: "xcpc note"
-  text: "My xcpc note website"
-  tagline: My great project tagline
+  text: "我的算法竞赛练习,笔记与模板"
+  tagline: By open17
   actions:
     - theme: brand
-      text: Markdown Examples
+      text: 算法模板
       link: /markdown-examples
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 查看博客
+      link: https://blog.open17.vip/
+  image: /logo.png
 
 features:
-  - title: Feature A
+  - title: C++
+    icon: 
+      src: /icon/cpp.svg
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
+  - title: Python
+    icon: 
+      src: /icon/python.svg
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
+  - title: Go
+    icon: 
+      src: /icon/go.svg
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    
 ---
 

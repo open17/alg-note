@@ -5,7 +5,14 @@ export default defineConfig({
   title: "xcpc note",
   description: "My xcpc note website",
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
+    logo: '/logo.png',
+    search: {
+      provider: 'local'
+    },
+     footer: {
+      message: 'Released under the Apache License.',
+      copyright: 'Copyright © 2023-present open17'
+    },
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Examples', link: '/markdown-examples' }
@@ -20,9 +27,8 @@ export default defineConfig({
         ]
       }
     ],
-
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/open17/' }
     ]
   }
 })
