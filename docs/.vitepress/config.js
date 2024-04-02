@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 import defaultConfig from 'vitepress-theme-open17/config'
 import markdownItFootnote from 'markdown-it-footnote'
 
+
 export default defineConfig({
   extends: defaultConfig,
   title: "Open17's Blog",
@@ -57,16 +58,51 @@ export default defineConfig({
     sidebar: {
       '/template/': [
         {
-          text: '算法模板',
+          text: '前言',
+          items: [
+            { text: '输入输出', link: '/template/Others/IO' },
+            { text: '附录', link: '/template/Others/append' },
+          ]
+        },
+        {
+          text: '基础算法',
+          items: [
+            { text: '二进制与集合', link: '/template/Alg/binary_set' },
+            { text: '二分查找', link: '/template/Alg/binary_search' },
+            { text: '前缀和与差分', link: '/template/Alg/presum' },
+            { text: '离散化', link: '/template/Alg/discrete' },
+          ]
+        },
+        {
+          text: '数据结构',
           items: [
             { text: '0.Intro & Logic', link: '/computer-basic/distcrete-structures/' },
-            { text: '1.SFSS', link: '/computer-basic/distcrete-structures/SFSS' },
-            { text: '2.Counting', link: '/computer-basic/distcrete-structures/Counting' },
-            { text: '3.Relations', link: '/computer-basic/distcrete-structures/Relations' },
-            { text: '4.Graph', link: '/computer-basic/distcrete-structures/Graph' },
-            { text: '5.Tree', link: '/computer-basic/distcrete-structures/Tree' }
           ]
-        }
+        },
+        {
+          text: '字符串',
+          items: [
+            { text: '0.Intro & Logic', link: '/computer-basic/distcrete-structures/' },
+          ]
+        },
+        {
+          text: '图论',
+          items: [
+            { text: '0.Intro & Logic', link: '/computer-basic/distcrete-structures/' },
+          ]
+        },
+        {
+          text: '动态规划',
+          items: [
+            { text: '0.Intro & Logic', link: '/computer-basic/distcrete-structures/' },
+          ]
+        },
+        {
+          text: '数学',
+          items: [
+            { text: '0.Intro & Logic', link: '/computer-basic/distcrete-structures/' },
+          ]
+        },
       ],
     },
     socialLinks: [
