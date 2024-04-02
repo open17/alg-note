@@ -1,10 +1,11 @@
-# 旅途的开始
-## 第一站-模板
-模板中开启本地测试需要传入`--open17`
-```R
-python template.py --open17
-```
-```py
+"""
+Req:
+    - py3.8+
+
+Using 'python IO.py --open17', then it will reading message from data.in and then ouput the ans to data.out
+
+"""
+
 import re,os
 from io import BytesIO, IOBase
 import random
@@ -23,7 +24,7 @@ BUFSIZE = 4096
 # 判断是否本地
 LOCAL="--open17" in sys.argv
 
-# 可能会导致pypy产生TLE
+# 可能会导致pypy产生TLE,不推荐使用
 # if "PyPy" in sys.version:
 #     import pypyjit; pypyjit.set_param('max_unroll_recursion=-1')
 
@@ -122,25 +123,3 @@ def solve():
 
 
 solve(LOCAL)
-```
-## 第二站-问题
-### 除法
-在python中`/`是浮点除法,整除是`//`
-### 深拷贝
-python中对于可变对象一般都是浅拷贝(复制指针)
-很多时候对数组我们需要深拷贝,通常方法如下
-- `deepcopy(a)`
-- `a[::]`
-### 字典序
-python的str可以直接比较字典序
-### 浮点高精度
-在python中浮点数的精度是有限的
-我们可以通过导入decimal库来实现浮点高精,其中高精度数用字符串传入
-```py
-from decimal import Decimal, getcontext
-# 精度范围
-getcontext().prec = 20
-a=Decimal('6.0000003')
-```
-### 负数取余
-python负数取余为正数,无需处理
