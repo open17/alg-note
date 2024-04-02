@@ -1,5 +1,3 @@
-# 并查集
-```py
 """
 并查集常用于维护一种传递关系
 这里只写路径压缩,
@@ -35,4 +33,3 @@ def check(x,y):
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
-```

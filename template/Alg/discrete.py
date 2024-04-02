@@ -1,5 +1,3 @@
-# 离散化
-```py
 """
 离散化是一种预处理手段,当原数据很大或含有负数、小数时我们会进行离散化
 
@@ -26,4 +24,3 @@ def check_discrete(b,v):
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
-```

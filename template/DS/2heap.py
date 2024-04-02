@@ -1,5 +1,3 @@
-# 对顶堆
-```py
 """
 这里维护第k大(维护第k小对元素取负即可)
 
@@ -38,4 +36,3 @@ def update(k):
             break
     while len(hi_heap)<size-k:
         heappush(hi_heap,-heappop(lo_heap))
-```

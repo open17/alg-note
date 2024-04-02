@@ -1,5 +1,3 @@
-# 矩阵快速幂
-```py
 def matrix_multiply(A, B,mod):
     rows_A,cols_A,cols_B=len(A),len(A[0]),len(B[0])
     res=[[0]*cols_B for _ in range(rows_A)]
@@ -26,4 +24,3 @@ n = 5  # 计算第5个斐波那契数
 result = matrix_power(matrix, n)
 fibonacci_number = result[0][1]  # 结果矩阵的第一行第二列即为斐波那契数
 print(fibonacci_number)
-```

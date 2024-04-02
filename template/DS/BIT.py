@@ -1,5 +1,3 @@
-# 树状数组
-```py
 """
 树状数组是支持单点修改和区间查询的一种简洁优雅的数据结构
 (当然转为维护差分数组的话就反过来了)
@@ -52,4 +50,3 @@ def query(x,y):
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
-```

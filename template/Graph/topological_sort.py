@@ -1,5 +1,3 @@
-# 拓扑排序
-```py
 """
 拓扑排序 按照入度从小到大排序的算法
 这里是拓扑排序的kehn算法实现
@@ -42,4 +40,3 @@ def get_in_degree(adj_list):
     for neighbors in adj_list:
         for node in neighbors:
             in_degree[node] += 1
-```

@@ -1,5 +1,3 @@
-# 字典树
-```py
 """
 字典树(前缀树) 常用于字符串匹配
 当然特殊的子类01tire常用于解决XOR最大问题和平衡树模拟
@@ -41,4 +39,3 @@ class Trie:
                 return False
             node=node.child[i]
         return True
-```

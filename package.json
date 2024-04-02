@@ -1,0 +1,20 @@
+{
+  "type": "module",
+  "name": "xcpc-note",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/open17/Python-for-CP.git",
+  "author": "open17 <opensci@163.com>",
+  "license": "Apache2.0",
+  "dependencies": {
+    "markdown-it-footnote": "^4.0.0",
+    "markdown-it-mathjax3": "^4.3.2",
+    "vitepress": "^1.0.2",
+    "vitepress-theme-open17": "^0.0.11"
+  },
+  "scripts": {
+    "dev": "vitepress dev docs --port 8080",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
+  }
+}

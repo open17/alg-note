@@ -1,5 +1,3 @@
-# 线段树
-```py
 from math import ceil
 MAXN=10**5+5
 tree=[0 for _ in range(MAXN<<2)]
@@ -39,5 +37,3 @@ def update(l,r,val,p=1,cl=1,cr=n):
     if l <= mid: update(l,r,val,p<<1,cl,mid)
     if r > mid: update(l,r,val,p<<1|1,mid+1,cr)
     tree[p]=tree[p<<1]+tree[p<<1|1]
-```
-

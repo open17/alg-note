@@ -1,5 +1,3 @@
-# 后缀数组
-```py
 """
 改自https://www.luogu.com.cn/record/119697259
 
@@ -57,4 +55,3 @@ s = input()
 sa, rk = buildSA(s)
 print(sa)
 print(rk)
-```
