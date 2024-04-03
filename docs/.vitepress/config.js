@@ -71,36 +71,45 @@ export default defineConfig({
             { text: '二分查找', link: '/template/Alg/binary_search' },
             { text: '前缀和与差分', link: '/template/Alg/presum' },
             { text: '离散化', link: '/template/Alg/discrete' },
+            { text: '矩阵快速幂', link: '/template/Alg/matrix_qpower' },
           ]
         },
         {
           text: '数据结构',
           items: [
-            { text: '0.Intro & Logic', link: '/computer-basic/distcrete-structures/' },
+            { text: '01字典树', link: '/template/DS/01tire' },
+            { text: '对顶堆', link: '/template/DS/2heap' },
+            { text: '树状数组', link: '/template/DS/BIT' },
+            { text: '线段树', link: '/template/DS/segment_tree' },
+            { text: 'ST表', link: '/template/DS/st' },
           ]
         },
         {
           text: '字符串',
           items: [
-            { text: '0.Intro & Logic', link: '/computer-basic/distcrete-structures/' },
+            { text: '后缀数组', link: '/template/String/SA' },
+            { text: '字典树', link: '/template/String/Tire' }
           ]
         },
         {
           text: '图论',
           items: [
-            { text: '0.Intro & Logic', link: '/computer-basic/distcrete-structures/' },
+            { text: '存图', link: '/template/Graph/save_graph' },
+            { text: '最短路', link: '/template/Graph/shortest_graph' },
+            { text: '拓扑排序', link: '/template/Graph/topo_sort' },
+            { text: '并查集', link: '/template/Graph/BUF' },
           ]
         },
-        {
-          text: '动态规划',
-          items: [
-            { text: '0.Intro & Logic', link: '/computer-basic/distcrete-structures/' },
-          ]
-        },
+        // {
+        //   text: '动态规划',
+        //   items: [
+        //     { text: '0.Intro & Logic', link: '/computer-basic/distcrete-structures/' },
+        //   ]
+        // },
         {
           text: '数学',
           items: [
-            { text: '0.Intro & Logic', link: '/computer-basic/distcrete-structures/' },
+            { text: '基本数论', link: '/template/Math/math_theory' },
           ]
         },
       ],

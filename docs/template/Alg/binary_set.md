@@ -33,7 +33,7 @@
 
 - 删除最小元素 `s&(s-1)` (即lowbit)
 - 元素个数`s.bit_count()`
-- 二进制长度`s.bit_length()
+- 二进制长度`s.bit_length()`
 - 集合中的最小元素`(s&-s).bit_length()-1`
 
 ## 二进制枚举
