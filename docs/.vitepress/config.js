@@ -5,8 +5,8 @@ import markdownItFootnote from 'markdown-it-footnote'
 
 export default defineConfig({
   extends: defaultConfig,
-  title: "Open17's Blog",
-  description: "My VitePress Blog Site",
+  title: "xcpc note",
+  description: "我的算法竞赛练习,笔记与模板",
   markdown: {
     math: true,
     config: (md) => {
