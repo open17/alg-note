@@ -1,5 +1,5 @@
 import sys
-from math import ceil,floor,fmod,gcd,sqrt,inf
+from math import ceil,floor,fmod,gcd,sqrt,inf,log2
 from bisect import bisect_left
 from collections import defaultdict,Counter,deque
 from functools import lru_cache, reduce, cmp_to_key
@@ -32,18 +32,16 @@ def LI():
 def LII():
     return list(map(int, input().split()))
 
-n=II()
+n,m=MII()
 
-
-path=[]
-def f(i,use=0):
-    if len(path)==n:
-        print(*path)
-        return
-    for i in range(n):
-        if (use>>i)&1:
-            continue
-        path.append(i+1)
-        f(i+1,use|(1<<i))
-        path.pop()
-f(0)
+for i in range((1<<n)-1,(1<<m)-1,-1):
+    ans=[]
+    while i:
+        lowbit=i&(-i)
+        ans.append(n-int(log2(lowbit)))
+        i-=lowbit
+        if len(ans)>m:
+            break
+    else:
+        if len(ans)==m:
+            print(*ans[::-1])
