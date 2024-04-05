@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": "https://github.com/open17/Python-for-CP.git",
   "author": "open17 <opensci@163.com>",
-  "license": "Apache2.0",
+  "license": "Apache-2.0",
   "dependencies": {
     "markdown-it-footnote": "^4.0.0",
     "markdown-it-mathjax3": "^4.3.2",

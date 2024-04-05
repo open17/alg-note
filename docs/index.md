@@ -8,11 +8,11 @@ hero:
   tagline: By open17
   actions:
     - theme: brand
-      text: 算法模板
+      text: 查看模板
       link: /template/Others/IO
     - theme: alt
-      text: 算法博客
-      link: https://blog.open17.vip/
+      text: 浏览博客
+      link: /page/blog
   image: /logo.png
 
 bgImg: "https://cdn.jsdelivr.net/gh/open17/Pic/img/202404020238396.png"
