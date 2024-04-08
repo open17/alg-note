@@ -33,29 +33,17 @@ def LII():
     return list(map(int, input().split()))
 
 
-n,r=MII()
-
-N=5003
-a=[[0] * N for _ in range(N)]
-
-for _ in range(n):
-    x,y,w=MII()
-    a[x+1][y+1]+=w
-
-for i in range(1, N):
-        for j in range(1, N):
-            a[i][j] = a[i][j] + a[i-1][j] + a[i][j-1] - a[i-1][j-1]
-def get(x1,y1,x2,y2):
-    return a[x2][y2] - a[x1 - 1][y2] - a[x2][y1 - 1] + a[x1 - 1][y1 - 1]
-
+n,k=MII()
+# 1 3 6 10 15
+a=[0]
+d=defaultdict(int)
+d[0]=1
 ans=0
-r=min(r,N-1)
-for i in range(N):
-    if i+r>=N:
-        break
-    for j in range(N):
-        if j+r>=N:
-            break
-        ans=max(ans,get(i+1,j+1,i+r,j+r))
-
+for i in range(n):
+    p=II()
+    a.append((a[-1]+p%k)%k)
+    ans+=d[a[-1]]
+    d[a[-1]]+=1
 print(ans)
+
+
