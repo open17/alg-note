@@ -16,10 +16,11 @@ export default defineConfig({
   head: [['link', { rel: 'icon', href: '/logo.png' }]],
   themeConfig: {
     blog: {
-      avatar: "https://cdn.jsdelivr.net/gh/open17/Pic/img/202404061142156.webp",
+      avatar: "https://cdn.jsdelivr.net/gh/open17/Pic/img/202402050154255.png",
       ornateStyle: true,
       bgImg: "https://cdn.jsdelivr.net/gh/open17/Pic/img/202404020226261.png",
-      bgImgDark: "https://cdn.jsdelivr.net/gh/open17/Pic/img/202404061333172.jpeg"
+      bgImgDark: "https://cdn.jsdelivr.net/gh/open17/Pic/img/202404061333172.jpeg",
+      title:"xcpc note",
     },
     footer: {
       message: 'All blogs and docs are licensed under <a href="http://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC 4.0</a>',
@@ -42,6 +43,7 @@ export default defineConfig({
     },
     nav: [
       { text: 'Home', link: '/' },
+      { text: 'Template', link: '/template/Others/IO.html' },
       {
         text: "Blog",
         items: [
@@ -51,7 +53,7 @@ export default defineConfig({
         ]
       },
       {
-        text: "open17",
+        text: "博客主站",
         link: "https://open17.vip"
       },
     ],

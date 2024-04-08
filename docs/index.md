@@ -13,7 +13,7 @@ hero:
     - theme: alt
       text: 浏览博客
       link: /page/blog
-  image: /logo.png
+  image: "https://cdn.jsdelivr.net/gh/open17/Pic/img/202402082225465.png"
 
 bgImg: "https://cdn.jsdelivr.net/gh/open17/Pic/img/202404020238396.png"
 bgImgDark: 'https://cdn.jsdelivr.net/gh/open17/Pic/img/202403302340940.png'
@@ -59,23 +59,19 @@ const contributers = [
 </script>
 
 
-## 博客的统计
-
-:::tip
-不知道放哪就放这里吧
-:::
+:::details 博客的统计
 
 从{{posts[posts.length-1].frontmatter.date.substring(0,10)}}开始, 写下了第一篇博客: {{posts[posts.length-1].frontmatter.title}}; 到{{posts[0].frontmatter.date.substring(0,10)}}, 写下了最近一次的博客: {{posts[0].frontmatter.title}}
 
 总计已经写下了{{posts.length}}篇博客, 平均每{{Math.ceil(((Math.abs((new Date(posts[posts.length-1].frontmatter.date)).getTime()-(new Date(posts[0].frontmatter.date)).getTime())+1)/ (1000 * 3600 * 24))/posts.length)}}天完成一篇博客
 
+:::
 
-
-## 贡献者
+:::details 博客的贡献者
 
 <VPTeamMembers size="medium" :members="contributers" />
 
-
+:::
 
 
 
