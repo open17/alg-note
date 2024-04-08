@@ -9,6 +9,7 @@ export default defineConfig({
   description: "我的算法竞赛练习,笔记与模板",
   markdown: {
     math: true,
+    lineNumbers: true,
     config: (md) => {
       md.use(markdownItFootnote)
     }

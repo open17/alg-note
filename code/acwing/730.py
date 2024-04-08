@@ -111,7 +111,7 @@ def for_t(func):
 
 
 @fstream
-@for_t
+# @for_t
 def solve():
     n=II()
     a=LII()

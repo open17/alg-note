@@ -31,11 +31,20 @@ def LI():
  
 def LII():
     return list(map(int, input().split()))
-    
-n,m=MII()
-a=LII()
-a=[0]+a  # 因为python低版本不支持accumalate的设置初始值参数
-b = list(accumulate(a))
-for _ in range(m):
-    i,j=MII()
-    print(b[j]-b[i-1])
+
+
+n,r=MII()
+
+N=5003
+a=[[0] * N for _ in range(N)]
+
+for _ in range(n):
+    x,y,w=MII()
+    a[x][y]=w
+
+for i in range(1, N):
+        for j in range(1, N):
+            a[i][j] = a[i][j] + a[i-1][j] + a[i][j-1] - a[i-1][j-1]
+def get(x1,y1,x2,y2):
+    return a[x2][y2] - a[x1 - 1][y2] - a[x2][y1 - 1] + a[x1 - 1][y1 - 1]
+
