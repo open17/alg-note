@@ -34,7 +34,7 @@ def LII():
 
 n,m=MII()
 
-for i in range((1<<n)-1,(1<<m)-1,-1):
+for i in range((1<<n)-1,(1<<m)-2,-1):
     ans=[]
     while i:
         lowbit=i&(-i)

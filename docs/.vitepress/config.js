@@ -16,10 +16,10 @@ export default defineConfig({
   head: [['link', { rel: 'icon', href: '/logo.png' }]],
   themeConfig: {
     blog: {
-      homeImgDark: "https://cdn.jsdelivr.net/gh/open17/Pic/img/202404021405381.jpg",
-      bgImg: "https://cdn.jsdelivr.net/gh/open17/Pic/img/202404020226261.png",
+      avatar: "https://cdn.jsdelivr.net/gh/open17/Pic/img/202404061142156.webp",
       ornateStyle: true,
-      bgImgDark: "https://cdn.jsdelivr.net/gh/open17/Pic/img/202403011548000.png"
+      bgImg: "https://cdn.jsdelivr.net/gh/open17/Pic/img/202404020226261.png",
+      bgImgDark: "https://cdn.jsdelivr.net/gh/open17/Pic/img/202404061333172.jpeg"
     },
     footer: {
       message: 'All blogs and docs are licensed under <a href="http://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC 4.0</a>',
