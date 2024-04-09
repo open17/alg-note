@@ -1,4 +1,4 @@
-<h1 align="center"> xcpc note </h1>
+<h1 align="center"> alg note </h1>
 <p align="center">我的算法竞赛练习,笔记与模板</p>
 <p align="center">博客主题：<a href="https://vitepress.open17.vip/" target="_blank">vitepress-theme-open17</a></p>
 <p align="center">站点地址: <a href="https://xcpc.open17.vip/" target="_blank">xcpc.open17.vip</a></p>
