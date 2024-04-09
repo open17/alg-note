@@ -4,3 +4,4 @@ tempCodeRunnerFile.py
 *.exe
 docs/.vitepress/cache/*
 node_modules/
+docs/.vitepress/dist/*

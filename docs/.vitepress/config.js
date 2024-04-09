@@ -5,8 +5,8 @@ import markdownItFootnote from 'markdown-it-footnote'
 
 export default defineConfig({
   extends: defaultConfig,
-  title: "xcpc note",
-  description: "我的算法竞赛练习,笔记与模板",
+  title: "Alg Note",
+  description: "我的算法竞赛练习,笔记,博客与模板",
   markdown: {
     math: true,
     lineNumbers: true,
@@ -21,7 +21,7 @@ export default defineConfig({
       ornateStyle: true,
       bgImg: "https://cdn.jsdelivr.net/gh/open17/Pic/img/202404020226261.png",
       bgImgDark: "https://cdn.jsdelivr.net/gh/open17/Pic/img/202404061333172.jpeg",
-      title:"xcpc note",
+      title:"Alg Note",
     },
     footer: {
       message: 'All blogs and docs are licensed under <a href="http://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC 4.0</a>',

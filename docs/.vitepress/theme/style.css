@@ -14,6 +14,10 @@
   --vp-home-hero-image-background-image: none;
 }
 
-.content-body{
-  padding-right: 1rem;
+#VPNavBar .content{
+  padding-right: 0 !important;
+}
+
+#VPNavBar .content-body{
+  padding-right: 2rem !important;
 }
