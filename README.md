@@ -6,7 +6,7 @@
 > 网站基于vitepress与vitepress主题[open17](https://vitepress.open17.vip/)制作,欢迎star! 
 
 
-在线预览点击<a href="https://alg.open17.vip/" target="_blank">这里</a>
+在线预览点击[这里](https://alg.open17.vip/)
 
 
 ## 🍏仓库介绍
