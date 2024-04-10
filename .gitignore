@@ -5,3 +5,4 @@ tempCodeRunnerFile.py
 docs/.vitepress/cache/*
 node_modules/
 docs/.vitepress/dist/*
+tailwind.config.js
