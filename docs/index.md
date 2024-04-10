@@ -40,9 +40,7 @@ import DataShow from './components/DataShow.vue'
 
 </script>
 
-## 数据统计
-
-<DataShow/>
+<DataShow class="mt-10"/>
 
 
 
