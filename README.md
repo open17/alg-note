@@ -19,31 +19,33 @@
 
 ## 🌈目录
 
+
+
 - 前言
-    - [输入输出](/template/Others/IO)
-    - [附录](/template/Others/append)
+    - [输入输出](https://alg.open17.vip/template/Others/IO)
+    - [附录](https://alg.open17.vip/template/Others/append)
 - 基础算法
-    - [二进制与集合](/template/Alg/binary_set)
-    - [二分查找](/template/Alg/binary_search)
-    - [前缀和与差分](/template/Alg/presum)
-    - [离散化](/template/Alg/discrete)
-    - [矩阵快速幂](/template/Alg/matrix_qpower)
+    - [二进制与集合](https://alg.open17.vip/template/Alg/binary_set)
+    - [二分查找](https://alg.open17.vip/template/Alg/binary_search)
+    - [前缀和与差分](https://alg.open17.vip/template/Alg/presum)
+    - [离散化](https://alg.open17.vip/template/Alg/discrete)
+    - [矩阵快速幂](https://alg.open17.vip/template/Alg/matrix_qpower)
 - 数据结构
-    - [01字典树](/template/DS/01tire)
-    - [对顶堆](/template/DS/2heap)
-    - [树状数组](/template/DS/BIT)
-    - [线段树](/template/DS/segment_tree)
-    - [ST表](/template/DS/st)
+    - [01字典树](https://alg.open17.vip/template/DS/01tire)
+    - [对顶堆](https://alg.open17.vip/template/DS/2heap)
+    - [树状数组](https://alg.open17.vip/template/DS/BIT)
+    - [线段树](https://alg.open17.vip/template/DS/segment_tree)
+    - [ST表](https://alg.open17.vip/template/DS/st)
 - 字符串
-    - [后缀数组](/template/String/SA)
-    - [字典树](/template/String/Tire)
+    - [后缀数组](https://alg.open17.vip/template/String/SA)
+    - [字典树](https://alg.open17.vip/template/String/Tire)
 - 图论
-    - [存图](/template/Graph/save_graph)
-    - [最短路](/template/Graph/shortest_graph)
-    - [拓扑排序](/template/Graph/topo_sort)
-    - [并查集](/template/Graph/BUF)
+    - [存图](https://alg.open17.vip/template/Graph/save_graph)
+    - [最短路](https://alg.open17.vip/template/Graph/shortest_graph)
+    - [拓扑排序](https://alg.open17.vip/template/Graph/topo_sort)
+    - [并查集](https://alg.open17.vip/template/Graph/BUF)
 - 数学
-    - [基本数论](/template/Math/math_theory)
+    - [基本数论](https://alg.open17.vip/template/Math/math_theory)
 
 ## 🔅贡献
 
