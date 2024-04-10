@@ -6,7 +6,7 @@
 
 也欢迎大家提交PR，贡献代码。
 
-## 🔱本地运行/浏览
+## 🛠️本地运行/浏览
 
 ```shell
 git clone https://github.com/open17/alg-note.git
@@ -23,6 +23,6 @@ npm run dev
 
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=enkerewpo&repo=OI-Public-Library)](https://github.com/enkerewpo/OI-Public-Library)
 
-## 🛠️协议
+## 🍏协议
 
 [Apache-2.0](./LICENSE)

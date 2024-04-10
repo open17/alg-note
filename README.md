@@ -9,7 +9,7 @@
 在线预览点击[这里](https://alg.open17.vip/)
 
 
-## 🍏仓库介绍
+## 🔱仓库介绍
 
 这是一个 monorepo 仓库，由一下几个部分组成:
 - [code](./code)：平时的练习代码
@@ -54,7 +54,7 @@
 
 也欢迎大家提交PR，贡献代码。
 
-## 🔱本地运行/浏览
+## 🛠️本地运行/浏览
 
 ```shell
 git clone https://github.com/open17/alg-note.git
@@ -71,6 +71,6 @@ npm run dev
 
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=enkerewpo&repo=OI-Public-Library)](https://github.com/enkerewpo/OI-Public-Library)
 
-## 🛠️协议
+## 🍏协议
 
 [Apache-2.0](./LICENSE)
