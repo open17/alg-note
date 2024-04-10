@@ -7,6 +7,7 @@
   "author": "open17 <opensci@163.com>",
   "license": "Apache-2.0",
   "dependencies": {
+    "echarts": "^5.5.0",
     "markdown-it-footnote": "^4.0.0",
     "markdown-it-mathjax3": "^4.3.2",
     "vitepress": "^1.0.2",
@@ -16,6 +17,6 @@
     "dev": "vitepress dev docs --port 8080",
     "build": "vitepress build docs",
     "preview": "vitepress preview docs",
-    "md":"node auto/main.js"
+    "md": "node auto/main.js"
   }
 }

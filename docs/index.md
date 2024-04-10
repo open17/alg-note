@@ -36,44 +36,13 @@ features:
 ---
 
 <script setup> 
-import {data as posts} from '../node_modules/vitepress-theme-open17/libs/posts.data.js' 
+import DataShow from './components/DataShow.vue'
 
-import { VPTeamMembers } from 'vitepress/theme'
-
-const webSvg=`<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 0 0 2.25-2.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v2.25A2.25 2.25 0 0 0 6 10.5Zm0 9.75h2.25A2.25 2.25 0 0 0 10.5 18v-2.25a2.25 2.25 0 0 0-2.25-2.25H6a2.25 2.25 0 0 0-2.25 2.25V18A2.25 2.25 0 0 0 6 20.25Zm9.75-9.75H18a2.25 2.25 0 0 0 2.25-2.25V6A2.25 2.25 0 0 0 18 3.75h-2.25A2.25 2.25 0 0 0 13.5 6v2.25a2.25 2.25 0 0 0 2.25 2.25Z" />
-</svg>
-`;
-
-const contributers = [
-  {
-    avatar: 'https://camo.githubusercontent.com/a39422b1f8c7b28c67af50d4216b618b220946624ce7558461b2396ced787fa5/68747470733a2f2f7777772e6f70656e31372e7669702f6c6f676f2e706e67',
-    name: 'open17',
-    title: 'the builder of this repositories',
-    links: [
-      { icon: 'github', link: 'https://github.com/open17/' },
-      {icon:{svg: webSvg},link: 'https://open17.vip'}
-    ]
-  },
-]
 </script>
 
+## 数据统计
 
-:::details 博客的统计
-
-从{{posts[posts.length-1].frontmatter.date.substring(0,10)}}开始, 写下了第一篇博客: {{posts[posts.length-1].frontmatter.title}};  
-到{{posts[0].frontmatter.date.substring(0,10)}}, 写下了最近一次的博客: {{posts[0].frontmatter.title}}
-
-直至今日,总计已经写下了{{posts.length}}篇博客, 平均每{{Math.ceil(((Math.abs((new Date(posts[posts.length-1].frontmatter.date)).getTime()-(new Date()).getTime())+1)/ (1000 * 3600 * 24))/posts.length)}}天完成一篇博客
-
-:::
-
-:::details 博客的贡献者
-
-<VPTeamMembers size="medium" :members="contributers" />
-
-:::
-
+<DataShow/>
 
 
 
