@@ -18,8 +18,6 @@ onMounted(() => {
         problemCnt.push({ value: problems[p], name: p });
     });
 
-    console.log(problemCnt)
-
     option = {
         tooltip: {
             trigger: 'item'
