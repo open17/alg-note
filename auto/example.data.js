@@ -1,7 +1,7 @@
 import fs from 'node:fs'
 
 export default {
-    watch: ['../code/**/*.py'],
+    watch: ['../code/**/*.py','../code/**/*.cpp'],
     load(watchedFiles) {
         const whiteList = ['duipai'];
         const m = {}
