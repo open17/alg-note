@@ -21,9 +21,9 @@ export default defineConfig({
       ornateStyle: true,
       bgImg: "https://cdn.jsdelivr.net/gh/open17/Pic/img/202404020226261.png",
       bgImgDark: "https://cdn.jsdelivr.net/gh/open17/Pic/img/202404061333172.jpeg",
-      title:"Alg Note",
-      desc:"Life is not about waiting for the storm to pass, but learning to dance in the rain.",
-      pageSize:5
+      title: "Alg Note",
+      desc: "Life is not about waiting for the storm to pass, but learning to dance in the rain.",
+      pageSize: 5
     },
     footer: {
       message: 'All blogs and docs are licensed under <a href="http://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC 4.0</a>',
@@ -76,6 +76,8 @@ export default defineConfig({
             { text: '二分查找', link: '/template/Alg/binary_search' },
             { text: '前缀和与差分', link: '/template/Alg/presum' },
             { text: '离散化', link: '/template/Alg/discrete' },
+            { text: '倍增', link: '/template/Alg/binary_lifting' },
+            { text: ' 双指针', link: '/template/Alg/double_pointer' },
           ]
         },
         {
@@ -118,8 +120,16 @@ export default defineConfig({
         },
         {
           text: '杂项',
-          items:[
+          items: [
+            { text: '说明', link: '/template/Others/' },
             { text: '矩阵快速幂', link: '/template/Others/matrix_qpower' },
+            { text: '快速幂', link: '/template/Others/qpower' },
+            { text: '语法糖', link: '/template/Others/candy' },
+            { text: '卡常', link: '/template/Others/Maybe-Faster' },
+            { text: 'pick定理', link: '/template/Others/pick' },
+            { text: '数论分块', link: '/template/Others/sqrt-decomposition' },
+            { text: '非常用平衡树', link: '/template/Others/balance_tree' },
+
           ]
         }
       ],

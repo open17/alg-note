@@ -41,4 +41,8 @@
 
 <<< @/../template/Alg/binary_search.py
 
+<<< @/../template/Alg/binary_search_ans.py
+
+<<< @/../template/Alg/binary_search_float.py
+
 :::
