@@ -64,6 +64,6 @@ $$
 
 :::code-group
 
-<<< @/../template/Alg/matrix_qpower.py
+<<< @/../template/Others/matrix_qpower.py
 
 :::
