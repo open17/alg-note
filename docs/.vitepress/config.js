@@ -65,8 +65,8 @@ export default defineConfig({
         {
           text: '前言',
           items: [
-            { text: '输入输出', link: '/template/Others/IO' },
-            { text: '附录', link: '/template/Others/append' },
+            { text: '输入输出', link: '/template/Intro/IO' },
+            { text: '附录', link: '/template/Intro/append' },
           ]
         },
         {
@@ -76,7 +76,6 @@ export default defineConfig({
             { text: '二分查找', link: '/template/Alg/binary_search' },
             { text: '前缀和与差分', link: '/template/Alg/presum' },
             { text: '离散化', link: '/template/Alg/discrete' },
-            { text: '矩阵快速幂', link: '/template/Alg/matrix_qpower' },
           ]
         },
         {
@@ -117,6 +116,12 @@ export default defineConfig({
             { text: '基本数论', link: '/template/Math/math_theory' },
           ]
         },
+        {
+          text: '杂项',
+          items:[
+            { text: '矩阵快速幂', link: '/template/Others/matrix_qpower' },
+          ]
+        }
       ],
     },
     socialLinks: [
