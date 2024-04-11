@@ -22,14 +22,15 @@
 
 
 - 前言
-    - [输入输出](https://alg.open17.vip/template/Others/IO)
-    - [附录](https://alg.open17.vip/template/Others/append)
+    - [输入输出](https://alg.open17.vip/template/Intro/IO)
+    - [附录](https://alg.open17.vip/template/Intro/append)
 - 基础算法
     - [二进制与集合](https://alg.open17.vip/template/Alg/binary_set)
     - [二分查找](https://alg.open17.vip/template/Alg/binary_search)
     - [前缀和与差分](https://alg.open17.vip/template/Alg/presum)
     - [离散化](https://alg.open17.vip/template/Alg/discrete)
-    - [矩阵快速幂](https://alg.open17.vip/template/Alg/matrix_qpower)
+    - [倍增](https://alg.open17.vip/template/Alg/binary_lifting)
+    - [ 双指针](https://alg.open17.vip/template/Alg/double_pointer)
 - 数据结构
     - [01字典树](https://alg.open17.vip/template/DS/01tire)
     - [对顶堆](https://alg.open17.vip/template/DS/2heap)
@@ -46,6 +47,15 @@
     - [并查集](https://alg.open17.vip/template/Graph/BUF)
 - 数学
     - [基本数论](https://alg.open17.vip/template/Math/math_theory)
+- 杂项
+    - [说明](https://alg.open17.vip/template/Others/)
+    - [矩阵快速幂](https://alg.open17.vip/template/Others/matrix_qpower)
+    - [快速幂](https://alg.open17.vip/template/Others/qpower)
+    - [语法糖](https://alg.open17.vip/template/Others/candy)
+    - [卡常](https://alg.open17.vip/template/Others/Maybe-Faster)
+    - [pick定理](https://alg.open17.vip/template/Others/pick)
+    - [数论分块](https://alg.open17.vip/template/Others/sqrt-decomposition)
+    - [非常用平衡树](https://alg.open17.vip/template/Others/balance_tree)
 
 ## 贡献
 
