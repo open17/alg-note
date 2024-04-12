@@ -1,0 +1,32 @@
+name: Run npm script on commit
+
+on:
+  push:
+
+jobs:
+  run-npm-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'  # 更改为您的 Node.js 版本
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run npm script
+        run: npm run md
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "docs(action): Update README.md"
+          git push
+
