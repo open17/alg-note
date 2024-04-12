@@ -15,7 +15,7 @@ npm i
 npm run dev
 ```
 
-## 📚学习参考
+## 学习参考
 
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=EndlessCheng&repo=codeforces-go)](https://github.com/EndlessCheng/codeforces-go)
 

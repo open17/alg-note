@@ -1,7 +1,7 @@
 # 🚀alg note
 我的算法竞赛练习,笔记,博客与模板
 
-## 🌠在线浏览
+## 在线浏览
 
 > 网站基于vitepress与vitepress主题[open17](https://vitepress.open17.vip/)制作,欢迎star! 
 
@@ -17,7 +17,7 @@
 - [docs](./docs/): vitepress站点内容,包含博客与文档,用于更好的浏览内容
 - [auto](./auto): 用于一些文档内容的自动化生成
 
-## 🌈目录
+## 目录
 
 
 
@@ -73,7 +73,7 @@ npm i
 npm run dev
 ```
 
-## 📚学习参考
+## 学习参考
 
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=EndlessCheng&repo=codeforces-go)](https://github.com/EndlessCheng/codeforces-go)
 
