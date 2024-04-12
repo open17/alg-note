@@ -94,7 +94,8 @@ export default defineConfig({
           text: '字符串',
           items: [
             { text: '后缀数组', link: '/template/String/SA' },
-            { text: '字典树', link: '/template/String/Tire' }
+            { text: '字典树', link: '/template/String/Tire' },
+            {text:'字符串哈希',link:'/template/String/hash'},
           ]
         },
         {

@@ -1,6 +1,14 @@
-# 附录-常见问题
+# 附录
 
-## 基本问题
+## 学习&参考
+
+- [灵神的板子](https://github.com/EndlessCheng/codeforces-go)
+- [OI-wiki](https://oi-wiki.org/)
+- [OI-Public-Library](https://github.com/enkerewpo/OI-Public-Library)
+- [Pecco的笔记](https://zhuanlan.zhihu.com/p/105467597)
+- [草莓奶昔](https://github.com/981377660LMT/algorithm-study)
+
+## 常见问题
 
 ### 算法竞赛到底要用什么语言?
 
@@ -34,7 +42,7 @@ go呢? 你可以参考[0x3f](https://github.com/EndlessCheng/codeforces-go)的�
 
 :::
 
-## Python相关
+## Python相关问题
 
 ### 如何整除?
 
@@ -69,7 +77,7 @@ a=Decimal('6.0000003')
 ### 负数取余怎么和C++不一样啊?
 python负数取余为正数,无需处理
 
-## C++相关
+## C++相关问题
 
 ### 为什么小数据没问题,大数据出错,逻辑也没问题
 
