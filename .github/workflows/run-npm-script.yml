@@ -16,17 +16,15 @@ jobs:
         with:
           node-version: '20'  # 更改为您的 Node.js 版本
 
-      - name: Install dependencies
-        run: npm install
-
       - name: Run npm script
         run: npm run md
 
       - name: Commit and push changes
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add .
           git commit -m "docs(action): Update README.md"
-          git push
-
+          git push https://$GH_TOKEN@github.com/open17/alg-note.git HEAD:main
