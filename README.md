@@ -40,9 +40,11 @@
 - 字符串
     - [后缀数组](https://alg.open17.vip/template/String/SA)
     - [字典树](https://alg.open17.vip/template/String/Tire)
+    - [字符串哈希](https://alg.open17.vip/template/String/hash)
 - 图论
     - [存图](https://alg.open17.vip/template/Graph/save_graph)
     - [最短路](https://alg.open17.vip/template/Graph/shortest_graph)
+    - [割点与桥](https://alg.open17.vip/template/Graph/cut)
     - [拓扑排序](https://alg.open17.vip/template/Graph/topo_sort)
     - [并查集](https://alg.open17.vip/template/Graph/BUF)
 - 数学
