@@ -46,7 +46,7 @@ export default defineConfig({
     },
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Template', link: '/template/Others/IO.html' },
+      { text: 'Template', link: '/template/Intro/IO.html' },
       {
         text: "Blog",
         items: [
@@ -102,6 +102,7 @@ export default defineConfig({
           items: [
             { text: '存图', link: '/template/Graph/save_graph' },
             { text: '最短路', link: '/template/Graph/shortest_graph' },
+            {text:'割点与桥',link:'/template/Graph/cut'},
             { text: '拓扑排序', link: '/template/Graph/topo_sort' },
             { text: '并查集', link: '/template/Graph/BUF' },
           ]
