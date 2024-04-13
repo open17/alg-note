@@ -32,4 +32,4 @@ jobs:
           git add .
           git commit -m "docs(action): Update README.md"
           git pull
-          git push https://open17@github.com/open17/alg-note.git HEAD:main
+          git push --force https://open17@github.com/open17/alg-note.git HEAD:main
