@@ -2,6 +2,9 @@ name: Run npm script on commit
 
 on:
   push:
+    branches: test
+  
+permissions: write-all
 
 jobs:
   run-npm-script:
