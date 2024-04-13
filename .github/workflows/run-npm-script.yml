@@ -2,7 +2,7 @@ name: Run npm script on commit
 
 on:
   push:
-    branches: test
+    branches: vitepress
   
 permissions: write-all
 
