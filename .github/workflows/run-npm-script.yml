@@ -28,11 +28,9 @@ jobs:
         run: npm run md
 
       - name: Commit and push changes
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add .
           git commit -m "docs(action): Update README.md"
-          git push https://$GH_TOKEN@github.com/open17/alg-note.git HEAD:main
+          git push https://open17@github.com/open17/alg-note.git HEAD:vitepress
