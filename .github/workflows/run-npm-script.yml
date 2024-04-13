@@ -31,6 +31,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+          git pull
           git add .
           git commit -m "docs(action): Update README.md"
           git push https://open17@github.com/open17/alg-note.git HEAD:vitepress
