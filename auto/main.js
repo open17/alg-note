@@ -23,7 +23,7 @@ fs.readFileSync(filePath, 'utf8').split('\n').forEach(line => {
     data+='\n';
   }
   if (line.includes('!menu end')) p = 1;
-  if (p===1) data += line;
+  if (p===1) data += line+'\n';
 })
 
 
