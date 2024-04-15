@@ -1,21 +1,31 @@
 import config from '../docs/.vitepress/config.js'
 import fs from 'fs';
 const filePath = './README.md';
-const preFilePath='./auto/README_pre.md';
-const aftFilePath='./auto/README_aft.md';
-const menu=config.themeConfig.sidebar['/template/'];
-const baselink="https://alg.open17.vip"
+const menu = config.themeConfig.sidebar['/template/'];
+const baselink = "https://alg.open17.vip";
 
 
 
-let data = fs.readFileSync(preFilePath, 'utf8');
-menu.forEach(fa => {
-    data+="- "+fa.text+"\n";
-    fa.items.forEach(son => {
-        data+="    - "+"["+son.text+"]"+"("+baselink+son.link+")\n";
-    })
-});
-data += fs.readFileSync(aftFilePath, 'utf8');
+let data = '';
+// 平衡因子
+let p = 1;
+fs.readFileSync(filePath, 'utf8').split('\n').forEach(line => {
+  if (line.includes('!menu start')) {
+    data += line;
+    p = 0;
+    data+='\n';
+    menu.forEach(fa => {
+      data += "- " + fa.text + "\n";
+      fa.items.forEach(son => {
+        data += "    - " + "[" + son.text + "]" + "(" + baselink + son.link + ")\n";
+      })
+    });
+    data+='\n';
+  }
+  if (line.includes('!menu end')) p = 1;
+  if (p===1) data += line;
+})
+
 
 fs.writeFile(filePath, data, (err) => {
   if (err) {
