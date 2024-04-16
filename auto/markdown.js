@@ -15,9 +15,7 @@ const filePath = './README.md';
     if (line.includes('!menu start')) {
       data += line;
       p = 0;
-      data += '\n';
       data+=menu;
-      data += '\n';
     }
     if (line.includes('!menu end')) p = 1;
     if (p === 1) data += line + '\n';

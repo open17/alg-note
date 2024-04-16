@@ -18,7 +18,7 @@ export async function generateMenu(folderPath) {
     for (const f of files) {
         const fullPath = folderPath + '/' + f;
         if (await isDirectory(fullPath)) {
-            menu += "\n- " + f + "\n";
+            menu += "\n- " + f.substring(2, f.length) + "\n";
             menu += await generateMenu(fullPath);
         } else {
             if (f.endsWith('.md') && f !== "README.md" && f !== 'index.md') {
