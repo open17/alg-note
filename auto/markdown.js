@@ -3,7 +3,8 @@ import fs from 'fs';
 
 import { generateMenu } from './menuGenerator.js';
 
-const filePath = './README.md';
+const writePath = './README.md';
+const readPath = './auto/README.md';
 
 (async () => {
   const path = 'docs/template';
@@ -11,7 +12,7 @@ const filePath = './README.md';
   let data = '';
   // 平衡因子
   let p = 1;
-  fs.readFileSync(filePath, 'utf8').split('\n').forEach(line => {
+  fs.readFileSync(readPath, 'utf8').split('\n').forEach(line => {
     if (line.includes('!menu start')) {
       data += line;
       p = 0;
@@ -22,7 +23,7 @@ const filePath = './README.md';
   })
 
 
-  fs.writeFile(filePath, data, (err) => {
+  fs.writeFile(writePath, data, (err) => {
     if (err) {
       console.error('写入文件时出错：', err);
       return;

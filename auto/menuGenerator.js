@@ -1,5 +1,4 @@
 import fs from 'fs';
-const path = 'docs/template';
 const baselink = "https://alg.open17.vip";
 
 async function isDirectory(folderPath) {
@@ -22,7 +21,7 @@ export async function generateMenu(folderPath) {
             menu += await generateMenu(fullPath);
         } else {
             if (f.endsWith('.md') && f !== "README.md" && f !== 'index.md') {
-                menu += "\n   - " + "[" + f.substring(0, f.length - 3) + "]" + "(" + baselink + '/' + fullPath + ") \n";
+                menu += "\n   - " + "[" + f.substring(0, f.length - 3) + "]" + "(" + baselink + '/' + fullPath.substring(0, fullPath.length - 3) + ") \n";
             }
         }
     }
