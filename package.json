@@ -17,6 +17,6 @@
     "dev": "vitepress dev docs --port 8080",
     "build": "vitepress build docs",
     "preview": "vitepress preview docs",
-    "md": "node auto/main.js"
+    "md": "node auto/markdown.js"
   }
 }
