@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: 查看模板
-      link: /template/Intro/IO
+      link: /template/0-Intro/IO
     - theme: alt
       text: 浏览博客
       link: /page/blog
