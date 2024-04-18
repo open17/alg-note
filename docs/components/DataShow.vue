@@ -1,6 +1,6 @@
 <script setup>
 import { data as posts } from '../../node_modules/vitepress-theme-open17/libs/posts.data.js'
-import { data as problems } from '../../auto/example.data.js'
+import { data as problems } from '../../auto/problems.data.js'
 import * as echarts from 'echarts';
 import { onMounted } from 'vue';
 import { useData, withBase } from "vitepress";

@@ -64,14 +64,14 @@ export default defineConfig({
       }
     },
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Template', link: '/template/0-Intro/' },
+      { text: '首页', link: '/' },
+      { text: '模板', link: '/template/0-Intro/' },
       {
-        text: "Blog",
+        text: "博客",
         items: [
-          { text: 'Home', link: '/page/blog' },
-          { text: 'Tags', link: '/page/tags' },
-          { text: 'Archive', link: ' /page/archive' },
+          { text: '主页', link: '/page/blog' },
+          { text: '标签', link: '/page/tags' },
+          { text: '归档', link: ' /page/archive' },
         ]
       },
       {
