@@ -1,3 +1,11 @@
+"""
+
+不知道为什么被卡,不得不用cpp  
+
+
+"""
+
+
 import re,os
 from io import BytesIO, IOBase
 import random
