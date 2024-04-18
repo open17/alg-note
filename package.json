@@ -11,7 +11,7 @@
     "markdown-it-footnote": "^4.0.0",
     "markdown-it-mathjax3": "^4.3.2",
     "vite-plugin-vitepress-auto-sidebar": "^1.6.3",
-    "vitepress": "^1.0.2",
+    "vitepress": "^1.1.0",
     "vitepress-theme-open17": "^1.0.2"
   },
   "scripts": {
