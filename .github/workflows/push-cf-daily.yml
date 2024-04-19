@@ -1,0 +1,41 @@
+name: Auto push Daily_CF_Problems
+
+on:
+  push:
+    branches: 
+      - vitepress
+      - test
+  
+permissions: write-all
+
+jobs:
+  push-cf-daily:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Clone Daily_CF_Problems repository
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        run: |
+          git config --local user.name "GitHub Actions"
+          git config --local user.email "actions@github.com"
+          git clone https://github.com/open17/Daily_CF_Problems.git
+
+      - name: Run Python script
+        run: |
+          cd Daily_CF_Problems 
+          git config --local user.name "GitHub Actions"
+          git config --local user.email "actions@github.com"
+          cd ..
+          python auto/auto_push_cf.py
+
+      - name: Push changes to Daily_CF_Problems
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        run: |
+          cd Daily_CF_Problems 
+          git push -f https://$ACCESS_TOKEN@github.com/open17/Daily_CF_Problems.git HEAD:auto
+      
