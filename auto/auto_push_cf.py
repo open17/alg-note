@@ -36,7 +36,7 @@ for file_path in list_files(folder_path):
         date_list=matches[-1].split('-')
         if len(date_list)!=3:continue
         dir=date_list[0]+"/"+date_list[1]+"/"+date_list[1]+date_list[2]
-        destination_path=os.path.join(target_path,dir)+'/personal_submission/'+re.sub(pattern, '_'+NAME, file_path.split('/')[-1])
+        destination_path=os.path.join(target_path,dir)+'/personal_submission/'+'cf'+re.sub(pattern, '_'+NAME, file_path.split('/')[-1])
         print("自动化打卡生成:   ",destination_path)
         copy_file(file_path, destination_path)
         os.system('cd ' + target_folder + ' && git add . && git commit -m "' + ''.join(date_list) + ' ' + NAME + '\'s submission"')
