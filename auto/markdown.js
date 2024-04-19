@@ -4,7 +4,7 @@ import fs from 'fs';
 import { generateMenu } from './menuGenerator.js';
 
 const writePath = './README.md';
-const readPath = './auto/README.md';
+const readPath = './README.md';
 
 (async () => {
   const path = 'docs/template';
