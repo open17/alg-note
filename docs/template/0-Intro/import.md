@@ -1,0 +1,37 @@
+# 注意事项/坑
+
+血的教训,以后每次比赛前一定要看看XD
+
+## 常见
+
+- 注意赛制,是OI/IOI/ACM?
+- 别卡题,及时换题不用急
+- 跟榜开是最稳妥的
+- 高精用py
+- 遇到没有思路的问题,多利用题目的条件,转化问题,可以从暴力枚举开始思考优化
+- 检查dfs的时候从树的角度思考
+- 小心符号优先级导致的错误,比如左移右移的优先级
+- 比赛写题的时候不要太悠闲,紧绷一点,打字不要慢慢的打
+
+
+## python
+- 浮点高精度是有限的,请用`decimal`
+- 模拟题算时间不要用`time`,用`datetime`
+- 记忆化容易给卡,最好转为递推的dp(数位dp等特殊情况除外)
+- input可能会被卡TLE,请使用sys或者`input=lambda: sys.stdin.readline().rstrip('\r\n')`
+- pypy比cpython会快,但是内存小很多
+- 不知道为什么`import pypyjit;pypyjit.set_param('max_unroll_recursion=-1')`可能会T
+- 注意多维数组浅拷贝导致的错误
+- 虽然自带高精度可以不用分步取模,但是高精运算慢,容易T,最好每步也都取模
+- python大部分传入参数都是左闭右开的
+- python的class比较慢,最好不使用或者加入`__slots__`等优化
+- 注意python的版本,有没有`cache`,`bit_length`等
+- 开定长数组可能比较慢(?)
+
+## C++
+
+- 一半的WA很可能是因为忘记开`long long`,所以请`#define int long long`,然后用`signed main()`
+- 数组开定长,尽量不要动态开
+- 不用endl,因为会刷新缓冲区,可能会被卡常,如果喜欢用endl,推荐先`#define endl '\n'`
+- `cin`+`ios`后不一定比`scanf`慢,但是记得`ios`后输入输出不要混用
+- 数组开太大也可能导致`Segment default`
