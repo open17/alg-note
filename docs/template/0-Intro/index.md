@@ -5,7 +5,7 @@ import DataShow from '../../components/DataShow.vue'
 
 </script>
 
-:::details 网站详情 
+:::details ♾️网站详情 
 
 <DataShow class="mt-10"/>
 
@@ -16,7 +16,7 @@ import DataShow from '../../components/DataShow.vue'
 
 目前以python和c++为主,可能以后会加入go
 
-由于个人精力有限,可能会有部分疏漏,欢迎提交pr
+由于个人精力有限,可能会有部分疏漏,欢迎提交pr,也可以直接点击页面底部左小角的编辑此页面修改
 
 ## 学习&参考~
 

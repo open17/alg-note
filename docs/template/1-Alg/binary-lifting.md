@@ -23,3 +23,9 @@
 也就是说,问题存在自乘关系时,我们便可以利用倍增来优化
 
 通常我们会使用 $f(i,p)=f(f(i,p-1),p-1)$ 进行倍增转移, $i$ 表示当前点, $p$ 表示当前点跳 $2^p$ 步
+
+## 经典运用
+- [快速幂](/template/7-Others/qpower), [矩阵快速幂](/template/7-Others/matrix-qpower)
+- [ST表](/template/2-DS/ST)
+- 倍增求LCA
+- ...
