@@ -7,7 +7,7 @@ on:
 permissions: write-all
 
 jobs:
-  run-npm-script:
+  update-readme-menu:
     runs-on: ubuntu-latest
 
     steps:
