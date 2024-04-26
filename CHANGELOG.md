@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.2](https://github.com/open17/Python-for-CP/compare/v1.1.1...v1.1.2) (2024-04-26)
+
+
+### 🚀 Chore | 构建/工程依赖/工具
+
+* 更新目录移至husky ([ac8adaf](https://github.com/open17/Python-for-CP/commit/ac8adaf6964d10b48f9d6defdb5c8b9fbfb1e8db))
+* 日志自动化配置 ([60bbdc4](https://github.com/open17/Python-for-CP/commit/60bbdc4836485dd773b57bfe385aca92e8004638))
+* 移除更新目录工作流 ([c6b9978](https://github.com/open17/Python-for-CP/commit/c6b99784c8354109cb0224dad1fb32bf52927c33))
+
 ### [1.1.1](https://github.com/open17/Python-for-CP/compare/v1.1.0...v1.1.1) (2024-04-26)
 
 ## 1.1.0 (2024-04-26)
