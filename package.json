@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "xcpc-note",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "index.js",
   "repository": "https://github.com/open17/Python-for-CP.git",
   "author": "open17 <opensci@163.com>",
@@ -10,15 +10,25 @@
     "echarts": "^5.5.0",
     "markdown-it-footnote": "^4.0.0",
     "markdown-it-mathjax3": "^4.3.2",
+    "standard-version": "^9.5.0",
     "vite-plugin-vitepress-auto-sidebar": "^1.6.3",
     "vitepress": "^1.1.0",
     "vitepress-theme-open17": "^1.0.2"
   },
+  "husky": {
+    "hooks": {
+      "pre-push": "yarn pre-push"
+    }
+  },
   "scripts": {
+    "pre-push": "standard-version",
     "dev": "vitepress dev docs --port 8080",
     "build": "vitepress build docs",
     "preview": "vitepress preview docs",
     "md": "node auto/markdown.js",
     "blog": "node auto/generateBlog.js"
+  },
+  "devDependencies": {
+    "husky": "^9.0.11"
   }
 }
