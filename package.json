@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "xcpc-note",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "main": "index.js",
   "repository": "https://github.com/open17/Python-for-CP.git",
   "author": "open17 <opensci@163.com>",
