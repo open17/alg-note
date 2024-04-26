@@ -8,6 +8,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "echarts": "^5.5.0",
+    "husky": "^9.0.11",
     "markdown-it-footnote": "^4.0.0",
     "markdown-it-mathjax3": "^4.3.2",
     "standard-version": "^9.5.0",
@@ -15,20 +16,14 @@
     "vitepress": "^1.1.0",
     "vitepress-theme-open17": "^1.0.2"
   },
-  "husky": {
-    "hooks": {
-      "pre-push": "yarn pre-push"
-    }
-  },
   "scripts": {
-    "pre-push": "standard-version",
+    "release": "standard-version",
     "dev": "vitepress dev docs --port 8080",
     "build": "vitepress build docs",
     "preview": "vitepress preview docs",
     "md": "node auto/markdown.js",
-    "blog": "node auto/generateBlog.js"
+    "blog": "node auto/generateBlog.js",
+    "prepare": "husky"
   },
-  "devDependencies": {
-    "husky": "^9.0.11"
-  }
+  "devDependencies": {}
 }
