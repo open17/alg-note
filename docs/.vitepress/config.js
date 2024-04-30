@@ -36,8 +36,8 @@ export default defineConfig({
     blog: {
       avatar: "https://avatars.githubusercontent.com/u/125687556?v=4",
       ornateStyle: true,
-      bgImg: "https://cdn.jsdelivr.net/gh/open17/Pic/img/202404020238396.png",
-      bgImgDark: "https://cdn.jsdelivr.net/gh/open17/Pic/img/202404061333172.jpeg",
+      // bgImg: "https://cdn.jsdelivr.net/gh/open17/Pic/img/202404020238396.png",
+      // bgImgDark: "https://cdn.jsdelivr.net/gh/open17/Pic/img/202404061333172.jpeg",
       title: "Alg Note",
       desc: "Life is not about waiting for the storm to pass, but learning to dance in the rain.",
       pageSize: 3,
