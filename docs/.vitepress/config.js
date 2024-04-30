@@ -66,6 +66,7 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '模板', link: '/template/0-Intro/' },
+      { text: '题库', link: '/page/problems' },
       {
         text: "博客",
         items: [

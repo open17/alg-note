@@ -20,6 +20,9 @@
     "preview": "vitepress preview docs",
     "md": "node auto/markdown.js",
     "blog": "node auto/generateBlog.js",
-    "move":"python auto/move_file.py"
+    "move": "python auto/move_file.py"
+  },
+  "devDependencies": {
+    "shiki": "^1.3.0"
   }
 }

@@ -2,10 +2,14 @@
 import { data as posts } from '../../node_modules/vitepress-theme-open17/libs/posts.data.js'
 import { data as problems } from '../../auto/problems.data.js'
 import * as echarts from 'echarts';
-import { onMounted } from 'vue';
+import { onMounted,defineProps } from 'vue';
 import { useData, withBase } from "vitepress";
 const { theme } = useData()
 const blogConfig = theme.value.blog;
+
+const props = defineProps({
+  hideAvatar:Boolean
+})
 
 onMounted(() => {
 
@@ -90,6 +94,7 @@ const data = [
 <template>
     <div class=" flex justify-center items-center gap-5 flex-wrap md:flex-row flex-col">
         <div
+            v-if="!hideAvatar"
             class="flex justify-center flex-col gap-5 items-center bg-white dark:bg-gray-700 rounded-2xl shadow-md p-5 md:w-[32rem] md:h-[32rem] w-full overflow-y-auto overflow-hidden">
             <img :src="blogConfig.avatar" v-if="blogConfig.avatar" alt="avatar"
                 class=" object-cover object-center w-[10rem] rounded-3xl" />
