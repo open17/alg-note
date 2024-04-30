@@ -35,12 +35,5 @@ features:
     
 ---
 
-<script setup> 
-import DataShow from './components/DataShow.vue'
-
-</script>
-
-<DataShow class="mt-10"/>
-
 
 

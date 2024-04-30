@@ -2,8 +2,8 @@
 import { data as posts } from '../../node_modules/vitepress-theme-open17/libs/posts.data.js'
 import { data as problems } from '../../auto/problems.data.js'
 import * as echarts from 'echarts';
-import { onMounted,defineProps } from 'vue';
-import { useData, withBase } from "vitepress";
+import { onMounted } from 'vue';
+import { useData } from "vitepress";
 const { theme } = useData()
 const blogConfig = theme.value.blog;
 
