@@ -19,6 +19,7 @@
     "build": "vitepress build docs",
     "preview": "vitepress preview docs",
     "md": "node auto/markdown.js",
-    "blog": "node auto/generateBlog.js"
+    "blog": "node auto/generateBlog.js",
+    "move":"python auto/move_file.py"
   }
 }
