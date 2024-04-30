@@ -23,4 +23,4 @@ $$f(s) = \sum_{i=1}^{l} s[i] \times b^{l-i} \pmod M$$
 
 单随机模数和BASE中奖,给测试用例卡掉了,再提交一遍不改代码就过了
 
-<<< @/../code/LeetCode/3031[哈希二分].py
+<<< @/../code/LeetCode/3031[字符串哈希].py
