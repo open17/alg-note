@@ -3,7 +3,7 @@
         <div class="text-3xl w-full text-center font-bold mt-5">题库</div>
         <div class="text-xl text-center">目前累计收入{{ problems.length }}题</div>
         <el-card class="w-full md:w-10/12">
-        <el-table ref="tableRef" row-key="date" :data="filterProblems" style="width: 100%">
+        <el-table ref="tableRef" row-key="date" :data="filterProblems" stripe :border="true" style="width: 100%">
             <el-table-column prop="category" label="类别" sortable width="180" column-key="date" />
             <el-table-column prop="name" label="题号/标题" width="180" sortable />
             <el-table-column prop="tags" label="标签" width="180" align="center">
@@ -31,7 +31,7 @@
                     <el-button size="small" type="success" @click="showCode(scope.row.html)">
                         查看代码
                     </el-button>
-                    <el-button size="small" type="info" @click="handleDelete(scope.$index, scope.row)">
+                    <el-button size="small" type="info" @click="getLink(scope.row)">
                         题目链接
                     </el-button>
                 </template>
@@ -50,6 +50,7 @@ import 'element-plus/dist/index.css'
 import { ElDialog,ElCard } from 'element-plus'
 import { ElTable, ElTableColumn } from 'element-plus'
 import { ElButton, ElTag, ElInput, ElSelect, ElOption } from 'element-plus'
+import { ElNotification } from 'element-plus'
 import { ref, computed, onMounted } from 'vue'
 import { codeToHtml } from 'shiki'
 import { useData } from 'vitepress';
@@ -78,6 +79,13 @@ async function getCodeHtml(code, lang) {
     return await codeToHtml(code, { lang: lang, themes: { light: 'github-light', dark: 'github-dark' } });
 }
 
+const getLink = (msg) => {
+  ElNotification({
+    title: '题目链接',
+    message: `未找到题目${msg.category}/${msg.name}的相关链接`,
+    type: 'warning',
+  })
+}
 
 const search = ref('')
 const filterProblems = computed(() =>
