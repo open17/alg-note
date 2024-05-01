@@ -6,22 +6,19 @@ export default {
     load(watchedFiles) {
         const problems = [];
         const allTags = new Set();
-        allTags.add("全部");
         watchedFiles.forEach(file => {
             const parsedPath = path.parse(file);
             const folderName = path.basename(path.dirname(file));
             const regex = /\[([^\]]*?)\]/g;
-            let tags = ["全部"];
+            let tags = [];
             parsedPath.name.replace(regex, (match, p1) => {
                 tags.push(p1);
                 allTags.add(p1);
             });
-            const fileName = `${folderName} ${parsedPath.name}`;
             const content = tryReadFile(file);
-
             const lang = getLanguageFromExtension(parsedPath.ext);
-            if (tags.length > 0 && content) {
-                problems.push({ name: fileName, code: content, tags: tags, lang });
+            if (content) {
+                problems.push({ category: folderName,name: parsedPath.name, code: content, tags: tags, lang });
             }
         });
 

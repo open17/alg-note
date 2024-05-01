@@ -8,8 +8,10 @@
   "license": "Apache-2.0",
   "dependencies": {
     "echarts": "^5.5.0",
+    "element-plus": "^2.7.2",
     "markdown-it-footnote": "^4.0.0",
     "markdown-it-mathjax3": "^4.3.2",
+    "unplugin-element-plus": "^0.8.0",
     "vite-plugin-vitepress-auto-sidebar": "^1.6.3",
     "vitepress": "^1.1.0",
     "vitepress-theme-open17": "^1.0.2"
