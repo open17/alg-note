@@ -1,13 +1,14 @@
 # 🚀alg note
 我的算法竞赛练习,笔记,博客与模板
 
-## 在线浏览
+## 在线查看
 
-> 网站基于vitepress与vitepress主题[open17](https://vitepress.open17.vip/)制作,欢迎star! 
+> 网站基于vitepress与vitepress主题[open17](https://vitepress.open17.vip/)  
 
-
-在线预览点击[这里](https://alg.open17.vip/)
-
+- [首页](https://alg.open17.vip/)
+- [算法模板](https://alg.open17.vip/template/0-Intro/IO.html)
+- [博客](https://alg.open17.vip/page/blog.html)
+- [题库](https://alg.open17.vip/page/problems.html)
 
 ## 仓库介绍
 
@@ -113,8 +114,8 @@
 ```shell
 git clone https://github.com/open17/alg-note.git
 cd alg-note
-npm i
-npm run dev
+yarn
+yarn dev
 ```
 
 ## 协议
