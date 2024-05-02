@@ -9,5 +9,4 @@ tailwind.config.js
 code/tmp/
 code/**/tmp/
 package-lock.json
-code/Others/ccpc/
-code/Codeforces/
+code/Others/*/
