@@ -11,7 +11,7 @@
                     <el-tag v-if="scope.row.tags.length === 0" type="info" disable-transitions>
                         暂无标签
                     </el-tag>
-                    <el-tag v-for="tag in scope.row.tags" disable-transitions>
+                    <el-tag v-for="tag in scope.row.tags" disable-transitions class="mr-1 mb-1" :type="getTagType(tag)">
                         {{ tag }}
                     </el-tag>
                 </template>
@@ -79,7 +79,33 @@ async function getCodeHtml(code, lang) {
     return await codeToHtml(code, { lang: lang, themes: { light: 'github-light', dark: 'github-dark' } });
 }
 
+
 const getLink = (msg) => {
+    let link=null;
+  if (msg.category==="luogu") {
+      link=`https://www.luogu.com.cn/problem/${msg.name}`;
+  }
+  else if(msg.category==="Codeforces"){
+    if ('0'<=msg.name[msg.name.length - 1]<='9'){
+      link=`https://codeforces.com/contest/${msg.name.slice(0, -2)}/problem/${msg.name.slice(-2).toUpperCase()}`;
+    }
+    else{
+      link=`https://codeforces.com/contest/${msg.name.slice(0,-1)}/problem/${msg.name.slice(-1).toUpperCase()}`;
+    }
+  }
+  else if(msg.category==="acwing"){
+      link=`https://www.acwing.com/problem/search/1/?search_content=${msg.name}`;
+  }
+  else if(msg.category==="VirtualJudge"){
+    link=`https://vjudge.net/problem#OJId=All&probNum=&title=${msg.name}&source=&category=all`;
+  }
+  else if(msg.category==="LeetCode"){
+      link=`https://leetcode.cn/problemset/?search=${msg.name}&page=1`;
+  }
+  if(link){
+    window.open(link);
+    return;
+  }
   ElNotification({
     title: '题目链接',
     message: `未找到题目${msg.category}/${msg.name}的相关链接`,
@@ -95,6 +121,13 @@ const filterProblems = computed(() =>
             data.name.toLowerCase().includes(search.value.toLowerCase())
     ).filter(problem => selectedTags.value.length === 0 || selectedTags.value.some(tag => problem.tags.includes(tag)))
 )
+
+
+const getTagType=(tag)=>{
+    const types=['warning','danger','primary','success']
+    const index=tag.length%types.length;
+    return types[index];
+}
 </script>
 
 
