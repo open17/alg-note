@@ -111,7 +111,7 @@ html.dark .shiki span {
 
 
 <style scoped>
-.code>>>pre{
+.code :deep(pre){
     padding: 10px;
     width: 100%;
     overflow-x: auto;
