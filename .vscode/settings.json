@@ -2,5 +2,8 @@
     "C_Cpp.errorSquiggles": "disabled",
     "files.exclude": {
         "**/*.exe": true
+    },
+    "files.associations": {
+        "*.snippet": "c"
     }
 }
