@@ -6,4 +6,6 @@ layout: page
 import ProblemPage from '../components/ProblemPage.vue'
 </script>
 
-<ProblemPage/>
+<client-only>
+    <ProblemPage/>
+</client-only>
