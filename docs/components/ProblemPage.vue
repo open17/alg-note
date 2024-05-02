@@ -86,7 +86,7 @@ const getLink = (msg) => {
       link=`https://www.luogu.com.cn/problem/${msg.name}`;
   }
   else if(msg.category==="Codeforces"){
-    if ('0'<=msg.name[msg.name.length - 1]<='9'){
+    if ('0' <= msg.name[msg.name.length - 1] && msg.name[msg.name.length - 1] <= '9'){
       link=`https://codeforces.com/contest/${msg.name.slice(0, -2)}/problem/${msg.name.slice(-2).toUpperCase()}`;
     }
     else{
