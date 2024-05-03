@@ -4,6 +4,10 @@
         "**/*.exe": true
     },
     "files.associations": {
-        "*.snippet": "c"
+        "*.snippet": "c",
+        "array": "cpp",
+        "string_view": "cpp",
+        "regex": "cpp",
+        "vector": "cpp"
     }
 }

@@ -5,6 +5,7 @@ public:
         stack<int> st;
         unordered_map<int, int> d;
         unordered_map<int, long long> cnt;
+        //注意这里0x3f3f3f会被卡掉(不够大)
         nums.push_back(INT_MAX);
         for (int i : nums) {
             while (!st.empty() && st.top() < i) {
