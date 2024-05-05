@@ -101,6 +101,8 @@
 
    - [matrix-qpower](https://alg.open17.vip/template/7-Others/matrix-qpower.html) 
 
+   - [others](https://alg.open17.vip/template/7-Others/others.html) 
+
    - [qpower](https://alg.open17.vip/template/7-Others/qpower.html) 
 <!-- !menu end -->
 
@@ -121,6 +123,7 @@ yarn dev
 ## 协议
 
 [Apache-2.0](./LICENSE)
+
 
 
 
