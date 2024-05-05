@@ -25,3 +25,8 @@ import DataShow from '../../components/DataShow.vue'
 - [OI-Public-Library](https://github.com/enkerewpo/OI-Public-Library)
 - [Pecco的笔记](https://zhuanlan.zhihu.com/p/105467597)
 - [草莓奶昔](https://github.com/981377660LMT/algorithm-study)
+
+## 其他:bread:
+
+模板对应的一些练习题可以在[题库](/page/problems)中搜索对应的标签
+
