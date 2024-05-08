@@ -16,7 +16,7 @@ def generate_statistics(directory, output_filename):
             type = filepath.parent.name
             if type not in white_list:
                 # 构造并执行 Git 命令，输出重定向到临时文件
-                command = f'git log --reverse --format=%ai -- "{filepath.as_posix()}" | head -1 > {temp_file}'
+                command = f'git log --format=%ai -- "{filepath.as_posix()}" | head -1 > {temp_file}'
                 os.system(command)
 
                 # 读取临时文件中的输出
