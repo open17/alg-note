@@ -16,7 +16,7 @@ def generate_statistics(directory, output_filename):
             type = filepath.parent.name
             if type not in white_list:
                 # 构造并执行 Git 命令，输出重定向到临时文件
-                command = f'git log --format=%ai -- "{filepath.as_posix()}" | head -1 > {temp_file}'
+                command = f'git log --format=%ai -- "{filepath.as_posix()}"  > {temp_file}'
                 os.system(command)
 
                 # 读取临时文件中的输出
@@ -26,7 +26,6 @@ def generate_statistics(directory, output_filename):
                         birth_date = datetime.strptime(first_line, '%Y-%m-%d %H:%M:%S %z').strftime('%Y-%m-%d')
                 except Exception as e:
                     print(e)
-                    continue
                     # 如果读取文件失败或日期解析失败，使用文件系统的创建日期
                     birth_date = datetime.fromtimestamp(filepath.stat().st_ctime).strftime('%Y-%m-%d')
                 # 更新类型统计
