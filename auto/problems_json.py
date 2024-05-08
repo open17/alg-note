@@ -25,6 +25,7 @@ def generate_statistics(directory, output_filename):
                         first_line = file.readline().strip()
                         print(first_line)
                         birth_date = datetime.strptime(first_line, '%Y-%m-%d %H:%M:%S %z').strftime('%Y-%m-%d')
+                    os.remove(temp_file)
                 except Exception as e:
                     print(e)
                     # 如果读取文件失败或日期解析失败，使用文件系统的创建日期
@@ -35,7 +36,7 @@ def generate_statistics(directory, output_filename):
                 date_count[birth_date] = date_count.get(birth_date, 0) + 1
 
     # 清理临时文件
-    # os.remove(temp_file)
+    
     print("cout",date_count)
     # 将统计结果保存到 JSON 文件中
     statistics = {'type_count': type_count, 'date_count': date_count}
