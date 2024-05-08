@@ -20,7 +20,6 @@
     "dev": "vitepress dev docs --port 8080",
     "build": "vitepress build docs",
     "preview": "vitepress preview docs",
-    "md": "node auto/markdown.js",
     "blog": "node auto/generateBlog.js",
     "move": "python auto/move_file.py"
   },

@@ -23,7 +23,6 @@ def generate_statistics(directory, output_filename):
                 try:
                     with open(temp_file, 'r') as file:
                         first_line = file.readline().strip()
-                        print(first_line)
                         birth_date = datetime.strptime(first_line, '%Y-%m-%d %H:%M:%S %z').strftime('%Y-%m-%d')
                 except Exception as e:
                     print(e)
@@ -36,13 +35,11 @@ def generate_statistics(directory, output_filename):
 
     # 清理临时文件
     os.remove(temp_file)
-    print("cout",date_count)
     # 将统计结果保存到 JSON 文件中
-    statistics = {'type_count': type_count, 'date_count': date_count}
+    statistics = {'typeCount': type_count, 'dateCount': date_count}
     with open(output_filename, 'w') as f:
         json.dump(statistics, f, indent=2)
-
     print('Statistics JSON has been saved.')
 
 # 调用函数
-generate_statistics('./code', 'statistics.json')
+generate_statistics('./code', 'problems_statistics.json')
