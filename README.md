@@ -1,7 +1,8 @@
-# 🚀alg note
+![](https://cdn.jsdelivr.net/gh/open17/Pic/img/202405071712279.png)
+# :bookmark_tabs:Alg Note
 我的算法竞赛练习,笔记,博客与模板
 
-## 在线查看
+## 🩵 在线查看
 
 > 网站基于vitepress与vitepress主题[open17](https://vitepress.open17.vip/)  
 
@@ -10,7 +11,7 @@
 - [博客](https://alg.open17.vip/page/blog.html)
 - [题库](https://alg.open17.vip/page/problems.html)
 
-## 仓库介绍
+## 🏷️ 仓库介绍
 
 这是一个 monorepo 仓库，由一下几个部分组成:
 - [code](./code)：平时的练习代码
