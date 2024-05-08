@@ -3,6 +3,7 @@ import defaultConfig from 'vitepress-theme-open17/config'
 import markdownItFootnote from 'markdown-it-footnote'
 import AutoSidebar from 'vite-plugin-vitepress-auto-sidebar';
 
+
 export default defineConfig({
   vite: {
     plugins: [
@@ -36,13 +37,26 @@ export default defineConfig({
     blog: {
       avatar: "https://avatars.githubusercontent.com/u/125687556?v=4",
       ornateStyle: true,
-      // bgImg: "https://cdn.jsdelivr.net/gh/open17/Pic/img/202404020238396.png",
-      // bgImgDark: "https://cdn.jsdelivr.net/gh/open17/Pic/img/202404061333172.jpeg",
       title: "Alg Note",
       desc: "Life is not about waiting for the storm to pass, but learning to dance in the rain.",
-      pageSize: 3,
+      pageSize: 10,
       tagPageLink:'/page/tags',
-       maxTags:5
+      maxTags:5,
+      widgets:[
+        {
+          name:"题目分析", // 自定义链接名称
+          link:'/page/problems',  //可以为空,非空会显示对应的链接
+          html: `<div class="flex justify-center items-center">
+            <div id="code-chart"></div>
+        </div>`, //内容html,支持tailwindcss
+        },
+        {
+          name:"做题日历`", // 自定义链接名称
+          html:`<div class="flex justify-center items-center">
+            <div id="code-date"></div>
+        </div>`, //内容html,支持tailwindcss
+        },
+      ]
     },
     footer: {
       message: 'All blogs and docs are licensed under <a href="http://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC 4.0</a>',

@@ -1,16 +1,5 @@
 # 前言
 
-<script setup> 
-import DataShow from '../../components/DataShow.vue'
-
-</script>
-
-:::details ♾️网站详情 
-
-<DataShow class="mt-10"/>
-
-:::
-
 ## 这里是...
 这里open17的个人算法模板  
 
