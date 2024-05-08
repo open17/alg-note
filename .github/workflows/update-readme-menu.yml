@@ -25,6 +25,9 @@ jobs:
       - name: Run npm script
         run: npm run md
 
+      - name: Run python
+        run: python auto/problems_json.py
+
       - name: Commit and push changes
         run: |
           if ! git diff --quiet; then
