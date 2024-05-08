@@ -1,10 +1,11 @@
-![](https://cdn.jsdelivr.net/gh/open17/Pic/img/202405071712279.png)
+[![](https://cdn.jsdelivr.net/gh/open17/Pic/img/202405071712279.png)](https://vitepress.open17.vip/)
+
+本仓库基于[vitepress-theme-open17](https://vitepress.open17.vip/)模板
+
 # :bookmark_tabs:Alg Note
 我的算法竞赛练习,笔记,博客与模板
 
 ## 🩵 在线查看
-
-> 网站基于vitepress与vitepress主题[open17](https://vitepress.open17.vip/)  
 
 - [首页](https://alg.open17.vip/)
 - [算法模板](https://alg.open17.vip/template/0-Intro/IO.html)
@@ -109,8 +110,9 @@
 
 ## 贡献
 
-本身实力有限XD  
-欢迎各位大佬指正错误
+如果您发现/遇到任何问题或有改进建议，欢迎来提issue或pr
+
+非常感谢您的贡献和星标（⭐）！
 
 ## 本地运行/浏览
 
@@ -121,9 +123,15 @@ yarn
 yarn dev
 ```
 
-## 协议
+## 💝 鸣谢
 
-[Apache-2.0](./LICENSE)
+- vitepress
+- vitepress-theme-open17
+- echart
+- tailwindcss  
+- element-plus
+- shiki
+
 
 
 
