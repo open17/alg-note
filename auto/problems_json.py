@@ -7,8 +7,8 @@ def generate_statistics(directory, output_filename):
     white_list = ['duipai']
     type_count = {}
     date_count = {}
-
-    temp_file = 'temp_git_output.txt'
+    idx=0
+    
 
     # 遍历目录中的所有文件
     for filepath in Path(directory).rglob('*'):
@@ -16,6 +16,8 @@ def generate_statistics(directory, output_filename):
             type = filepath.parent.name
             if type not in white_list:
                 # 构造并执行 Git 命令，输出重定向到临时文件
+                idx+=1
+                temp_file = f'temp_git_output_{idx}.txt'
                 command = f'git log --reverse --format=%ai -- "{filepath.as_posix()}"  > {temp_file}'
                 os.system(command)
 
