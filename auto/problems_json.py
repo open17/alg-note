@@ -36,7 +36,7 @@ def generate_statistics(directory, output_filename):
 
     # 清理临时文件
     os.remove(temp_file)
-
+    print("cout",date_count)
     # 将统计结果保存到 JSON 文件中
     statistics = {'type_count': type_count, 'date_count': date_count}
     with open(output_filename, 'w') as f:
