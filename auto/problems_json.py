@@ -25,6 +25,7 @@ def generate_statistics(directory, output_filename):
                         first_line = file.readline().strip()
                         birth_date = datetime.strptime(first_line, '%Y-%m-%d %H:%M:%S %z').strftime('%Y-%m-%d')
                 except Exception as e:
+                    print(e)
                     continue
                     # 如果读取文件失败或日期解析失败，使用文件系统的创建日期
                     birth_date = datetime.fromtimestamp(filepath.stat().st_ctime).strftime('%Y-%m-%d')

@@ -30,11 +30,9 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          if ! git diff --quiet; then
-            git config --local user.email "action@github.com"
-            git config --local user.name "GitHub Action"
-            git add .
-            git commit -m "docs(action): Update README.md"
-            git pull
-            git push https://open17@github.com/open17/alg-note.git HEAD:vitepress
-          fi
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "docs(action): Update README.md"
+          git pull
+          git push https://open17@github.com/open17/alg-note.git HEAD:vitepress
