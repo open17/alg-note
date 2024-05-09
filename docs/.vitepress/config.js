@@ -2,11 +2,12 @@ import { defineConfig } from 'vitepress'
 import defaultConfig from 'vitepress-theme-open17/config'
 import markdownItFootnote from 'markdown-it-footnote'
 import AutoSidebar from 'vite-plugin-vitepress-auto-sidebar';
-
+import { vitepressPythonEditor } from 'vitepress-python-editor/vite-plugin'
 
 export default defineConfig({
   vite: {
     plugins: [
+      vitepressPythonEditor({ assetsDir: 'docs/.vitepress/dist/assets' }),
       AutoSidebar({
         ignoreList: ['page', 'posts', 'public'],
         titleFromFile: true,
@@ -81,6 +82,7 @@ export default defineConfig({
       { text: '首页', link: '/' },
       { text: '模板', link: '/template/0-Intro/' },
       { text: '题库', link: '/page/problems' },
+      { text: '练习场', link: '/page/playground' },
       {
         text: "博客",
         items: [

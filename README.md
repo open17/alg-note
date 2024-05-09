@@ -43,6 +43,7 @@ yarn dev
 - tailwindcss  
 - element-plus
 - shiki
+- [vitepress-python-editor](https://github.com/zqianem/vitepress-python-editor)
 
 
 
