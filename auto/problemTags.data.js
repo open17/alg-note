@@ -13,6 +13,7 @@ export default {
             const regex = /\[([^\]]*?)\]/g;
             let tags = [];
             const name = parsedPath.name.replace(regex, (match, p1) => {
+                p1 = p1.toUpperCase();
                 tags.push(p1);
                 allTags.add(p1);
                 return "";
