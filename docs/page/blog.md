@@ -3,6 +3,11 @@ layout: blog
 lastUpdated: false
 bgImg: "https://cdn.jsdelivr.net/gh/open17/Pic/img/202404061333025.webp"
 bgImgDark: "https://cdn.jsdelivr.net/gh/open17/Pic/img/202404061333172.jpeg"
+widgets:
+    - name: "题目分析"
+      html: '<div class="flex justify-center items-center w-full"><div id="code-chart"></div></div>'
+    - name: "题目分析"
+      html: '<div class="flex justify-center items-center w-full"><div id="code-date"></div></div>'
 ---
 
 <script setup>
@@ -128,7 +133,7 @@ height: 20rem;
 }
 @media (min-width: 768px) {
     #code-chart {
-        width:20rem;
+        /* width:20rem; */
         height:20rem;
     }
 }

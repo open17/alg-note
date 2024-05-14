@@ -44,19 +44,19 @@ export default defineConfig({
       tagPageLink:'/page/tags',
       maxTags:5,
       widgets:[
-        {
-          name:"题目分析", // 自定义链接名称
-          link:'/page/problems',  //可以为空,非空会显示对应的链接
-          html: `<div class="flex justify-center items-center">
-            <div id="code-chart"></div>
-        </div>`, //内容html,支持tailwindcss
-        },
-        {
-          name:"做题日历`", // 自定义链接名称
-          html:`<div class="flex justify-center items-center">
-            <div id="code-date"></div>
-        </div>`, //内容html,支持tailwindcss
-        },
+        // {
+        //   name:"题目分析", // 自定义链接名称
+        //   link:'/page/problems',  //可以为空,非空会显示对应的链接
+        //   html: `<div class="flex justify-center items-center">
+        //     <div id="code-chart"></div>
+        // </div>`, //内容html,支持tailwindcss
+        // },
+        // {
+        //   name:"做题日历`", // 自定义链接名称
+        //   html:`<div class="flex justify-center items-center">
+        //     <div id="code-date"></div>
+        // </div>`, //内容html,支持tailwindcss
+        // },
       ]
     },
     footer: {

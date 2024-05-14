@@ -16,7 +16,7 @@
     "vite-plugin-vitepress-auto-sidebar": "^1.6.3",
     "vitepress": "^1.1.0",
     "vitepress-python-editor": "^1.2.1",
-    "vitepress-theme-open17": "^1.1.1"
+    "vitepress-theme-open17": "^1.1.2"
   },
   "scripts": {
     "dev": "vitepress dev docs --port 8080",

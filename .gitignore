@@ -10,3 +10,4 @@ code/tmp/
 code/**/tmp/
 package-lock.json
 code/Others/*/
+.vscode/
