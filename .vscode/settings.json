@@ -8,6 +8,8 @@
         "array": "cpp",
         "string_view": "cpp",
         "regex": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "cmath": "cpp",
+        "iostream": "cpp"
     }
 }

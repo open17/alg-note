@@ -13,9 +13,9 @@
     "markdown-it-mathjax3": "^4.3.2",
     "pyodide": "^0.25.1",
     "unplugin-element-plus": "^0.8.0",
-    "vite-plugin-vitepress-auto-sidebar": "^1.6.3",
     "vitepress": "^1.1.0",
     "vitepress-python-editor": "^1.2.1",
+    "vitepress-sidebar": "^1.23.0",
     "vitepress-theme-open17": "^1.1.2"
   },
   "scripts": {
