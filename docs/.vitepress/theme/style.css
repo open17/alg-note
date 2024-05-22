@@ -569,7 +569,8 @@
 
 .MathJax {
     position: relative;
-    top: 0.3rem;
+    top: 0.4rem;
+    min-width: 0.55rem;
 }
 
 :root {
