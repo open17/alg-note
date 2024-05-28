@@ -11,3 +11,4 @@ code/**/tmp/
 package-lock.json
 code/Others/*/
 .vscode/
+.vscode/settings.json
