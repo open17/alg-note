@@ -1,7 +1,7 @@
 class Solution {
 public:
     int climbStairs(int n) {
-        // f(n)=f(n-1)+f(n-2)
+        // f(i)=f(i-1)+f(i-2)
         int f[n+1];
         memset(f,0,sizeof(f));
         f[0]=1;
