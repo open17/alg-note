@@ -9,11 +9,25 @@ $$f(s) = \sum_{i=1}^{l} s[i] \times b^{l-i} \pmod M$$
 
 ## 模板
 
-双模数,可能慢一些,但不容易被卡
-
 :::code-group
 
-<<< @/../template/String/hash.py
+```cpp
+// 蒯自蛙总
+long long P[n + 1];
+P[0] = 1;
+for (int i = 1; i <= n; i++)
+    P[i] = P[i - 1] * BASE % MOD;
+long long H[n + 1];
+H[0] = 0;
+for (int i = 1; i <= n; i++)
+    H[i] = (H[i - 1] * BASE + word[i - 1] - 'a') % MOD;
+auto query = [&](int L, int R)
+{
+    return (H[R] - H[L - 1] * P[R - L + 1] % MOD + MOD) % MOD;
+};
+```
+
+<<< @/../template/String/hash.py [python 双模数]
 
 :::
 
