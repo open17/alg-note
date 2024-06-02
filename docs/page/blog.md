@@ -112,6 +112,9 @@ onMounted(() => {
             },
             yearLabel:{
                 show:false
+            },
+            dayLabel:{
+                show:false
             }
         },
         series: {
