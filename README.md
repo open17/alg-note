@@ -1,9 +1,7 @@
-[![](https://cdn.jsdelivr.net/gh/open17/Pic/img/202405071712279.png)](https://vitepress.open17.vip/)
-
-本仓库基于[vitepress-theme-open17](https://vitepress.open17.vip/)模板
-
 # :bookmark_tabs:Alg Note
 我的算法竞赛练习,笔记,博客与模板
+
+本仓库基于[vitepress-theme-open17](https://vitepress.open17.vip/)模板
 
 ## 🩵 在线查看
 
@@ -19,6 +17,15 @@
 - [template](./template): 算法模板代码
 - [docs](./docs/): vitepress站点内容,包含博客与文档,用于更好的浏览内容
 - [auto](./auto): 一些自动化,包括自动化目录更新,CF打卡仓库自动推送等
+
+## 常用指令
+
+```shell
+yarn dev
+yarn build 
+yarn blog # 快捷创建博客文章
+yarn move # 处理临时比赛代码
+```
 
 ## 贡献
 
