@@ -591,3 +591,6 @@
 #VPNavBar .content-body{
   padding-right: 2rem !important;
 }
+hr{
+  display: none;
+}
