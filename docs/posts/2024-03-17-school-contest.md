@@ -80,11 +80,15 @@ def solve():
 ## D题DFS
 不知道为什么python给卡到RE
 
-题意其实不是很好理解所谓的"Choose one leaf vertex v and delete it along with all incident edges"
+题面写的不是很清晰
 
-按照通常的理解会在样例3WA掉,这个时候才能理解incident是有特殊方向的
+所谓的"Choose one leaf vertex v and delete it along with all incident edges"有点模糊
 
-我们要求的其实是从叶子节点开始删到只有一颗子树
+直到我在样例3 WA掉,这个时候才明白incident是有特殊方向的
+
+其实翻译过来简而言之要求:
+
+从叶子节点开始删到只有一颗子树
 
 顺带一提没想到`vector<vector<int>>`开邻接表会被卡
 ```cpp
@@ -130,7 +134,8 @@ int main() {
 
 
 题目建图跑最短路即可
-```cpp
+
+```py
 def solve():
     n=II()
     g=[[] for _ in range(n+1)]
