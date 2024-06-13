@@ -6,10 +6,10 @@
 ## 🏷️ 仓库介绍
 
 这是一个 monorepo 仓库，由一下几个部分组成:
-- [code](./code)：平时的练习代码
-- [docs](./docs/): vitepress站点内容,用于更好的可视化仓库
-  - [template](./docs/template): 算法模板文档
-- [auto](./auto): 一些自动化,包括自动化目录更新,CF打卡仓库自动推送等
+- [code](https://github.com/open17/alg-note/tree/vitepress/code)：平时的练习代码
+- [template](https://github.com/open17/alg-note/tree/vitepress/template): 算法模板文档
+- [auto](https://github.com/open17/alg-note/tree/vitepress/auto): 一些自动化,包括自动化目录更新,CF打卡仓库自动推送等
+- 其他,vitepress站点配置与页面
 
 ## 🩵 在线查看
 
