@@ -3,20 +3,19 @@
 
 本仓库基于[vitepress-theme-open17](https://vitepress.open17.vip/)模板
 
-## 🩵 在线查看
-
-- [首页](https://alg.open17.vip/)
-- [算法模板](https://alg.open17.vip/template/0-Intro/IO.html)
-- [博客](https://alg.open17.vip/page/blog.html)
-- [题库](https://alg.open17.vip/page/problems.html)
-
 ## 🏷️ 仓库介绍
 
 这是一个 monorepo 仓库，由一下几个部分组成:
 - [code](./code)：平时的练习代码
-- [template](./template): 算法模板代码
-- [docs](./docs/): vitepress站点内容,包含博客与文档,用于更好的浏览内容
+- [docs](./docs/): vitepress站点内容,用于更好的可视化仓库
+  - [template](./docs/template): 算法模板文档
 - [auto](./auto): 一些自动化,包括自动化目录更新,CF打卡仓库自动推送等
+
+## 🩵 在线查看
+
+- [首页](https://alg.open17.vip/)
+- [算法模板](https://alg.open17.vip/template/0-Intro/IO.html)
+- [题库](https://alg.open17.vip/page/problems.html)
 
 ## 常用指令
 
@@ -50,7 +49,7 @@ yarn dev
 - tailwindcss  
 - element-plus
 - shiki
-- [vitepress-python-editor](https://github.com/zqianem/vitepress-python-editor)
+- vitepress-python-editor
 
 
 
