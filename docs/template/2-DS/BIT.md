@@ -12,6 +12,28 @@
 
 :::code-group
 
-<<< @/../template/DS/BIT.py
+```py
+N=1e5+10
+tree=[0]*int(N)
+
+def lowbit(x):
+    return x&(-x)
+
+def update(x,val,n):
+    while x<=n:
+        tree[x]+=val
+        x+=lowbit(x)
+
+def _query(x):
+    res=0
+    while x>0:
+        res+=tree[x]
+        x-=lowbit(x)
+    return res
+
+def query(x,y):
+    if x<y: return _query(y) - _query(x-1)
+    return _query(x) - _query(y-1)
+```
 
 :::

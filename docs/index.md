@@ -1,5 +1,4 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
@@ -11,8 +10,8 @@ hero:
       text: 查看模板
       link: /template/0-Intro/IO
     - theme: alt
-      text: 浏览博客
-      link: /page/blog
+      text: 练习题库
+      link: /page/problems
   image: "https://cdn.jsdelivr.net/gh/open17/Pic/img/202402082225465.png"
 
 # bgImg: "https://cdn.jsdelivr.net/gh/open17/Pic/img/202404020238396.png"
@@ -20,18 +19,42 @@ hero:
 
 
 features:
-  - title: C++
+  - title: 算法
     icon: 
-      src:  https://cdn.jsdelivr.net/gh/open17/Pic/img/202404021557151.svg
-    details: "C++ 是一种高级语言，它是由 Bjarne Stroustrup 于 1979 年在贝尔实验室开始设计开发的。C++ 进一步扩充和完善了 C 语言，是一种面向对象的程序设计语言"
-  - title: Python
+      src:  https://cdn.jsdelivr.net/gh/open17/Pic/img/202406140215526.svg
+    details: "基础算法与思想,包括倍增,二分,贪心,双指针,前缀和,差分..."
+    link: "/template/1-Alg/"
+    linkText: "点击跳转"
+  - title: 数据结构
+    details: "常用数据结构,包含树状数组,线段树,平衡树,ST表..."
+    link: "/template/2-DS/"
+    linkText: "点击跳转"
     icon: 
-      src: https://cdn.jsdelivr.net/gh/open17/Pic/img/202404021557744.svg
-    details: "Python 是一种解释型、面向对象、动态数据类型的高级程序设计语言。Python 由 Guido van Rossum 于 1989 年底发明，第一个公开发行版发行于 1991 年。"
-  - title: Go
+      src:  https://cdn.jsdelivr.net/gh/open17/Pic/img/202406140214331.svg
+  - title: 图论
+    details: "基本图论算法与数据结构,例如最短路,最小生成树,联通分量,并查集..."
+    link: "/template/3-Graph/"
+    linkText: "点击跳转"
     icon: 
-      src: https://cdn.jsdelivr.net/gh/open17/Pic/img/202404021557367.svg
-    details: "Go 是一个开源的编程语言，它能让构造简单、可靠且高效的软件变得容易。Go是从2007年末由Robert Griesemer, Rob Pike, Ken Thompson主持开发，并最终于2009年11月开源。"
+      src:  https://cdn.jsdelivr.net/gh/open17/Pic/img/202406140211170.svg
+  - title: 字符串
+    details: "非常基本的字符串板子,包括字典树,字符串哈希,KMP,SA..."
+    link: "/template/4-String/"
+    linkText: "点击跳转"
+    icon: 
+      src:  https://cdn.jsdelivr.net/gh/open17/Pic/img/202406140212394.svg
+  - title: 数学
+    details: "比较偏向基础数论,包括扩展欧几里得,数论分块,裴蜀定理,费马小定理,逆元..."
+    link: "/template/5-Math/"
+    linkText: "点击跳转"
+    icon: 
+      src:  https://cdn.jsdelivr.net/gh/open17/Pic/img/202406140215742.svg
+  - title: 动态规划
+    details: "最喜欢的一集,从@擦车开始,再到线性,背包,区间,数位..."
+    link: "/template/6-DP/"
+    linkText: "点击跳转"
+    icon: 
+      src:  https://cdn.jsdelivr.net/gh/open17/Pic/img/202406140211450.svg
     
 ---
 

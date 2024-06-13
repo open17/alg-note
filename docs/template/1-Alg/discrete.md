@@ -16,6 +16,16 @@
 
 :::code-group
 
-<<< @/../template/Alg/discrete.py
+```py
+from bisect import bisect_left
+
+def discrete(a):
+    a.sort()
+    x = [a[i] for i in range(len(a)) if a[i] != a[i - 1]]
+    return x
+
+def check_discrete(b,v):
+    return bisect_left(b,v)
+```
 
 :::

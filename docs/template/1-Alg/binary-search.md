@@ -39,10 +39,24 @@
 
 ::: code-group
 
-<<< @/../template/Alg/binary_search.py
+```py
+from bisect import bisect_left
 
-<<< @/../template/Alg/binary_search_ans.py
+nums=[1,3,14,28,140,999]
+target=28
 
-<<< @/../template/Alg/binary_search_float.py
+bisect_left(nums,target)
+
+
+# 左闭右开
+l,r=0,len(nums)
+while l<r:
+    mid=l+r>>1
+    if nums[mid]<target:
+        l=mid+1
+    else:
+        r=mid
+print(l)
+```
 
 :::

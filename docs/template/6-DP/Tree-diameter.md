@@ -1,9 +1,10 @@
-"""
+# 树的直径
 
-g为邻接表
 
-"""
+## DP求法
 
+
+```py
 ans=0
 def f(root):
     res=0
@@ -13,3 +14,4 @@ def f(root):
         ans=max(ans,v+res)
         res=max(res,v)
     return res
+```

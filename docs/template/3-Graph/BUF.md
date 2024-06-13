@@ -9,7 +9,21 @@
 ## 模板
 :::code-group
 
-<<< @/../template/Graph/buf.py
+```py
+N=1e5+2
+uf=[0]*int(N)
+def init(n):
+    for i in range(n):
+        uf[i]=i
+def find(x):
+    if uf[x]!=x:
+        uf[x]=find(uf[x])
+    return uf[x]
+def union(x,y):
+    uf[find(x)]=find(y)
+def check(x,y):
+    return find(x)==find(y)
+```
 
 :::
 

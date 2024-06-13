@@ -8,7 +8,17 @@
 
 个人喜欢用这个
 
-<<< @/../template/Graph/save.py
+```py
+n=100
+
+g=[[] for _ in range(n)]
+
+
+for i in range(n):
+    x,y=map(int,input().split())
+    g[x].append(y)
+    g[y].append(x)
+```
 
 ## 链式前向星
 本质上是用链表实现的邻接表

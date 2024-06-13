@@ -53,28 +53,15 @@ $$lcm(m,n)=\frac{m\times n}{gcd(m,n)}$$
 
 :::code-group
 
-<<< @/../template/Math/is_prime.py
-
-:::
-
-
-### 素数筛
-
-素数筛用于求一段数据范围内那些数为素数
-
-显然暴力的想法为对数据范围内所有数都做一遍素数判定,这种做法是$O(n\sqrt n)$的,效度很低
-
-如何优化呢?注意到一个数的倍数一定为合数,因此我们只需要对每个数标记其倍数即可
-
-这便是埃氏筛,但是这效率依然不高,它会将一个合数重复多次标记
-
-我们可以避免这个重复,使得效率达到线性
-
-在这里i即做质素
-
-:::code-group
-
-<<< @/../template/Math/prime_sieve.py
+```py
+def isPrime(a):
+    if a < 2:
+        return False
+    for i in range(2, int(a**(1/2)) + 1):
+        if a % i == 0:
+            return False
+    return True
+```
 
 :::
 
@@ -94,21 +81,6 @@ $$a=p_1p_2p_3\dotsb p_k$$
 朴素: 暴力枚举$[2,\sqrt{N}]$即可  
 
 Pollard Rho?不会
-
-## 扩展欧几里得
-
-性质: 若$ax+by=d$,则有$d=gcd(a,b)$
-
-可视为裴蜀定理的逆定理
-
-:::code-group
-
-<<<@/../template/Math/exgcd.py
-:::
-
-## 逆元
-
-> 待补
 
 ## 同余
 

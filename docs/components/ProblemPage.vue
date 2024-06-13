@@ -6,7 +6,13 @@
             <el-table ref="tableRef" row-key="date" :data="filterProblems" stripe :border="true" style="width: 100%">
                 <el-table-column prop="category" label="类别" sortable width="140" column-key="date" />
                 <el-table-column prop="name" label="题号/标题" width="180" sortable />
-                <el-table-column prop="tags" label="标签" align="center">
+                <el-table-column prop="tags" align="center">
+                    <template #header>
+                        <el-select v-model="selectedTags" filterable placeholder="选择标签" multiple collapse-tags
+                            collapse-tags-tooltip class="w-full md:w-7/12">
+                            <el-option v-for="item in allTags" :key="item" :label="item" :value="item" />
+                        </el-select>
+                    </template>
                     <template #default="scope">
                         <el-tag v-if="scope.row.tags.length === 0" type="info" disable-transitions>
                             暂无标签
@@ -20,13 +26,8 @@
                 <el-table-column align="center" width="340">
                     <template #header>
                         <div class="flex justify-between items-center gap-5 flex-wrap md:flex-nowrap">
-                            <el-select v-model="selectedTags" filterable placeholder="选择标签" multiple collapse-tags
-                                collapse-tags-tooltip class="w-full md:w-7/12">
-                                <el-option v-for="item in allTags" :key="item" :label="item" :value="item" />
-                            </el-select>
                             <el-input v-model="search" placeholder="搜索题号/标题" />
                         </div>
-
                     </template>
                     <template #default="scope">
                         <div class="flex flex-wrap justify-center items-center gap-2">

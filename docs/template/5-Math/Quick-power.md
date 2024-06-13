@@ -1,3 +1,6 @@
+# 快速幂
+
+```cpp
 int qpow(int a,int b,int p){
     a%=p;
     int ans=1;
@@ -8,3 +11,5 @@ int qpow(int a,int b,int p){
     }
     return ans;
 }
+```
+
