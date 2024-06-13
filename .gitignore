@@ -3,8 +3,10 @@
 tempCodeRunnerFile.py
 *.exe
 docs/.vitepress/cache/*
+.vitepress/cache/*
 node_modules/
 docs/.vitepress/dist/*
+.vitepress/dist/*
 tailwind.config.js
 code/tmp/
 code/**/tmp/

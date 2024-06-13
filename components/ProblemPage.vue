@@ -58,7 +58,7 @@ import { ElNotification } from 'element-plus'
 import { ref, computed, onMounted } from 'vue'
 import { codeToHtml } from 'shiki'
 import { useData } from 'vitepress';
-import { data as problemWithTags } from '../../auto/problemTags.data.js';
+import { data as problemWithTags } from '../auto/problemTags.data.js';
 
 const problems = problemWithTags.problems;
 const allTags = problemWithTags.allTags;

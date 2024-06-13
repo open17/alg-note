@@ -6,7 +6,7 @@ import { vitepressPythonEditor } from 'vitepress-python-editor/vite-plugin'
 import { generateSidebar } from 'vitepress-sidebar';
 
 const vitepressSidebarOptions = [{
-  documentRootPath: 'docs',
+  // documentRootPath: '/',
   scanStartPath: 'template',
   resolvePath: '/template/',
   collapsed: true,
@@ -19,7 +19,7 @@ const vitepressSidebarOptions = [{
 export default defineConfig({
   vite: {
     plugins: [
-      vitepressPythonEditor({ assetsDir: 'docs/.vitepress/dist/assets' }),
+      vitepressPythonEditor({ assetsDir: './vitepress/dist/assets' }),
     ]
   },
   extends: defaultConfig,
