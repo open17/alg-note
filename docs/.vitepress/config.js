@@ -24,7 +24,7 @@ export default defineConfig({
   },
   extends: defaultConfig,
   title: "Alg Note",
-  description: "我的算法竞赛练习,笔记,博客与模板",
+  description: "xcpc练习,笔记与模板",
   markdown: {
     math: true,
     lineNumbers: true,
@@ -41,9 +41,9 @@ export default defineConfig({
       title: "Alg Note",
       desc: "Life is not about waiting for the storm to pass, but learning to dance in the rain.",
       pageSize: 10,
-      tagPageLink:'/page/tags',
-      maxTags:5,
-      widgets:[
+      tagPageLink: '/page/tags',
+      maxTags: 5,
+      widgets: [
       ]
     },
     footer: {
@@ -69,19 +69,22 @@ export default defineConfig({
       { text: '首页', link: '/' },
       { text: '模板', link: '/template/0-Intro/' },
       { text: '题库', link: '/page/problems' },
-      { text: '练习场', link: '/page/playground' },
+
       {
-        text: "博客",
+        text: "更多",
         items: [
-          { text: '主页', link: '/page/blog' },
-          { text: '标签', link: '/page/tags' },
-          { text: '归档', link: ' /page/archive' },
+          { text: '在线运行', link: '/page/playground' },
+          {
+            text: "算法博客",
+            link: "https://open17.vip"
+          },
+          {
+            text: "Clist统计",
+            link: "https://clist.by/coder/"
+          }
         ]
       },
-      {
-        text: "博客主站",
-        link: "https://open17.vip"
-      },
+
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/open17/xcpc-note' }
