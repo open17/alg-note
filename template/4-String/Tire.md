@@ -6,6 +6,28 @@
 
 :::code-group
 
+```cpp
+const int N=3e5+5;
+int nxt[N][26][2];
+int cnt = 0;
+string s;
+For(i, 0, n)
+{   
+    cin >> s;
+    int cur = 0;
+    for (int i = 0; i < s.size(); i++)
+    {
+        int c = s[i] - 'a';
+        if (!nxt[cur][c][0])
+        {
+            nxt[cur][c][0] = ++cnt;
+        }
+        nxt[cur][c][1]++;
+        cur = nxt[cur][c][0];
+    }
+}
+```
+
 ```py
 """
 其实用nxt数组模拟即可,python最好不要使用class

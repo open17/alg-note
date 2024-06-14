@@ -16,6 +16,15 @@
 
 :::code-group
 
+```cpp
+ranges::sort(s);
+s.erase(unique(s.begin(),s.end()),s.end());
+
+auto get=[&s](int v) -> int {
+    return ranges::lower_bound(s, x) - s.begin() + 1
+};
+```
+
 ```py
 from bisect import bisect_left
 

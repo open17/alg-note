@@ -594,3 +594,10 @@
 hr{
   display: none;
 }
+
+.MathJax {
+  position: relative;
+  top: 0.4rem;
+  min-width: 1.4rem;
+  text-align: center;
+}

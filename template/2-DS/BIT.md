@@ -12,6 +12,24 @@
 
 :::code-group
 
+```cpp
+int lowbit(int x){return x&(-x);}
+void add(int i,int v,int n){
+    while(i<n){
+        tree[i]+=v;
+        i+=lowbit(i);
+    }
+}
+int query(int i){
+    int ans=0;
+    while(i>0){
+        ans+=tree[i];
+        i-=lowbit(i);
+    }
+    return ans;
+}
+```
+
 ```py
 N=1e5+10
 tree=[0]*int(N)
