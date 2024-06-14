@@ -12,7 +12,7 @@ hero:
     - theme: alt
       text: 练习题库
       link: /page/problems
-  image: "https://cdn.jsdelivr.net/gh/open17/Pic/img/202402082225465.png"
+  image: "https://cdn.jsdelivr.net/gh/open17/Pic/img/202406150027870.png"
 
 # bgImg: "https://cdn.jsdelivr.net/gh/open17/Pic/img/202404020238396.png"
 # bgImgDark: 'https://cdn.jsdelivr.net/gh/open17/Pic/img/202403302340940.png'

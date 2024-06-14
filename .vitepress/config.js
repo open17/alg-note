@@ -35,35 +35,10 @@ export default defineConfig({
   head: [['link', { rel: 'icon', href: '/logo.png' }]],
   themeConfig: {
     sidebar: generateSidebar(vitepressSidebarOptions),
-    blog: {
-      avatar: "https://avatars.githubusercontent.com/u/125687556?v=4",
-      ornateStyle: true,
-      title: "Alg Note",
-      desc: "Life is not about waiting for the storm to pass, but learning to dance in the rain.",
-      pageSize: 10,
-      tagPageLink: '/page/tags',
-      maxTags: 5,
-      widgets: [
-      ]
-    },
-    footer: {
-      message: '网站基于vitepress主题<a href="https://vitepress.open17.vip" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">open17</a>💙',
-      copyright: 'Copyright © 2023-present <a href="https://github.com/open17">open17</a>, 全部博客与文档(除特殊声明)均遵循协议<a href="http://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC 4.0</a>'
-    },
-    editLink: {
-      pattern: 'https://github.com/open17/xcpc-note/edit/vitepress/:path',
-      text: 'Edit this page on GitHub'
-    },
+    siteTitle: false,
     logo: '/logo.png',
-    search: {
-      provider: 'local'
-    },
-    lastUpdated: {
-      text: 'Updated at',
-      formatOptions: {
-        dateStyle: 'full',
-        timeStyle: 'medium'
-      }
+    blog: {
+      ornateStyle: true,
     },
     nav: [
       { text: '首页', link: '/' },
@@ -88,6 +63,24 @@ export default defineConfig({
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/open17/xcpc-note' }
-    ]
+    ],
+    footer: {
+      message: '网站基于vitepress主题<a href="https://vitepress.open17.vip" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">open17</a>💙',
+      copyright: 'Copyright © 2023-present <a href="https://github.com/open17">open17</a>, 全部博客与文档(除特殊声明)均遵循协议<a href="http://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC 4.0</a>'
+    },
+    editLink: {
+      pattern: 'https://github.com/open17/xcpc-note/edit/vitepress/:path',
+      text: 'Edit this page on GitHub'
+    },
+    search: {
+      provider: 'local'
+    },
+    lastUpdated: {
+      text: 'Updated at',
+      formatOptions: {
+        dateStyle: 'full',
+        timeStyle: 'medium'
+      }
+    }
   }
 })
