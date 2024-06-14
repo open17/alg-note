@@ -51,7 +51,7 @@ export default defineConfig({
       copyright: 'Copyright © 2023-present <a href="https://github.com/open17">open17</a>, 全部博客与文档(除特殊声明)均遵循协议<a href="http://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC 4.0</a>'
     },
     editLink: {
-      pattern: 'https://github.com/open17/xcpc-note/edit/vitepress/docs/:path',
+      pattern: 'https://github.com/open17/xcpc-note/edit/vitepress/:path',
       text: 'Edit this page on GitHub'
     },
     logo: '/logo.png',
