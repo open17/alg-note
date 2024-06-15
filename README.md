@@ -1,5 +1,5 @@
 # :bookmark_tabs:Alg Note
-这里是$\mathcal{\pmb{Open17}}$的个人算法竞赛笔记与模板仓库
+这里是 $\mathcal{\pmb{Open17}}$ 的个人算法竞赛笔记与模板仓库
 
 > 本仓库基于[vitepress-theme-open17](https://vitepress.open17.vip/)模板
 
