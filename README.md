@@ -1,7 +1,7 @@
 # :bookmark_tabs:Alg Note
-我的算法竞赛练习,笔记,博客与模板
+这里是$\mathcal{\pmb{Open17}}$的个人算法竞赛笔记与模板仓库
 
-本仓库基于[vitepress-theme-open17](https://vitepress.open17.vip/)模板
+> 本仓库基于[vitepress-theme-open17](https://vitepress.open17.vip/)模板
 
 ## 🏷️ 仓库介绍
 
@@ -19,12 +19,27 @@
 
 ## 常用指令
 
+
+### vitepress命令
+
 ```shell
 yarn dev
 yarn build 
-yarn blog # 快捷创建博客文章
+```
+
+### 处理临时比赛代码
+
+```shell
 yarn move # 处理临时比赛代码
 ```
+
+### 合并模板准备打印
+
+```shell
+python auto/print_pdf.py
+```
+
+
 
 ## 贡献
 

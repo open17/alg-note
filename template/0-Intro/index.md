@@ -1,7 +1,7 @@
 # 前言
 
 ## 这里是...
-这里open17的个人算法模板  
+这里 $\mathcal{\pmb{Open17}}$ 的个人算法模板  
 
 目前以python和c++为主,可能以后会加入go
 
@@ -14,6 +14,7 @@
 - [OI-Public-Library](https://github.com/enkerewpo/OI-Public-Library)
 - [Pecco的笔记](https://zhuanlan.zhihu.com/p/105467597)
 - [草莓奶昔](https://github.com/981377660LMT/algorithm-study)
+- [hh2048/XCPC](https://github.com/hh2048/XCPC)
 
 ## 其他:bread:
 
