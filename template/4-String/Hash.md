@@ -12,19 +12,35 @@ $$f(s) = \sum_{i=1}^{l} s[i] \times b^{l-i} \pmod M$$
 :::code-group
 
 ```cpp
-// 蒯自蛙总
-long long P[n + 1];
-P[0] = 1;
-for (int i = 1; i <= n; i++)
-    P[i] = P[i - 1] * BASE % MOD;
-long long H[n + 1];
-H[0] = 0;
-for (int i = 1; i <= n; i++)
-    H[i] = (H[i - 1] * BASE + word[i - 1] - 'a') % MOD;
-auto query = [&](int L, int R)
+int p[N];
+int h[N];
+
+
+int query(int l,int r,int MOD){
+    return (h[r] - h[l-1] * p[r-l+1] % MOD + MOD) % MOD;
+}
+
+void hhhh()
 {
-    return (H[R] - H[L - 1] * P[R - L + 1] % MOD + MOD) % MOD;
-};
+    string s;
+    cin >> s;
+    int n = s.size();
+    srand(time(0));
+    const int MOD = 998244353 + rand() % 10008;
+    const int BASE = 33 + rand() % 234;
+    p[0] = 1;
+    h[0] = 0;
+    For(i, 1, n + 1) { 
+        p[i] = (p[i - 1] * BASE) % MOD; 
+        h[i]=(h[i-1]*BASE+s[i-1]-'a')%MOD;
+    }
+    int m=read();
+    For(i,0,m){
+        int a=read(),b=read(),c=read(),d=read();
+        if(query(a,b,MOD)==query(c,d,MOD))print("Yes");
+        else print("No");
+    }
+}
 ```
 
 ```py
