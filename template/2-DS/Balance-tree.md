@@ -150,9 +150,3 @@ int suc(int v)
     return kth(r);
 }
 ```
-
-
-
-## 其他
-
-在[杂项](/template/7-Others/Balance-tree)中还收录了一些其他的平衡树写法,但不保证代码正确性
