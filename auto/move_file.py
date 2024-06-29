@@ -3,11 +3,12 @@
 """
 
 import os,shutil,sys
-if len(sys.argv)!=2:
-    print("Usage: python move_files.py [source_folder]")
+if len(sys.argv)!=3:
+    print("Usage: python move_files.py [source_folder] [target_folder]")
     exit(1)
 
 source_folder = sys.argv[1]
+target_folder = sys.argv[2]
 
 print(source_folder)
 
@@ -32,7 +33,5 @@ for f,f_path in list_files(source_folder):
     if f.endswith(".exe"):
         continue
     tmp=source_folder.split("\\")
-    target_folder="\\".join(tmp[:-1])
-    print(target_folder)
-    copy_file(f_path, f"{target_folder}\\[{tmp[-1]}]{f}")
+    copy_file(f_path, f"{target_folder}\\{tmp[-1]}{f}")
     
