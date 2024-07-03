@@ -147,4 +147,4 @@ def update(x1, y1,x2,y2 val):
 
 ## 更多
 
-[集训题解课件(题有些有点唐,我负责写的题解)](https://slides.open17.vip/slides/ACM2024-SUMMER/)
+[集训题解课件](https://slides.open17.vip/slides/ACM2024-SUMMER/)

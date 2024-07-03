@@ -2,6 +2,11 @@
 
 > 待整理
 
+## 算法集训课件
+
+- [2024新生-前缀和与差分](https://slides.open17.vip/slides/ACM2024-SUMMER/1)
+- [字符串分享](https://slides.open17.vip/slides/Str-share-2024/1)
+
 ## 防hack哈希表
 
 在codeforces中使用哈希表(unordered_map)有几率会被特别构造的数据hack掉
