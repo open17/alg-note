@@ -11,7 +11,7 @@
 
 值得注意的是应该从最高位开始走,这是个要注意的贪心的点,因为最高位贡献大
 
-## 模板
+## 标准模板
 
 :::code-group
 
@@ -72,3 +72,40 @@ def find_max(x):
 ```
 
 :::
+
+## 可撤销模板
+
+```cpp
+int nxt[(int)3e5+10][2][2];
+int cnt=0;
+void insert(int v){
+    int cur=0;
+    for(int i=30;i>=0;i--){
+        int p=(v>>i)&1;
+        if(!nxt[cur][p][0])nxt[cur][p][0]=++cnt;
+        nxt[cur][p][1]++;
+        cur=nxt[cur][p][0];
+    }
+}
+void del(int v){
+    int cur=0;
+    for(int i=30;i>=0;i--){
+        int p=(v>>i)&1;
+        nxt[cur][p][1]--;
+        cur=nxt[cur][p][0];
+    }
+}
+int get(int v){
+    int cur=0,val=0;
+    for(int i=30;i>=0;i--){
+        int p=(v>>i)&1;
+        if(nxt[cur][p^1][1]>0){
+            cur=nxt[cur][p^1][0];
+            val+=1<<i;
+            continue;
+        }
+        cur=nxt[cur][p][0];
+    }
+    return val;
+}
+```
