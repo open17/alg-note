@@ -80,7 +80,7 @@ template <typename T, typename... Args> void print(const T &t, const Args... arg
 // USE_DEBUG 模式下的输出
 template <typename T> void debug(const T &t) { 
     #ifdef USE_DEBUG
-    std::cout << t << "\n\n ---DEBUG OUTPUT--- \n\n"; 
+    std::cout << t << "\n\n"; 
     #endif
 }
 template <typename T, typename... Args> void debug(const T &t, const Args... args)
