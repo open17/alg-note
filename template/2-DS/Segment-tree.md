@@ -1,79 +1,104 @@
 # 线段树
 
-> 大部分来自pecco的板子
 
 ## 什么是?
 
+可以实现较快的区间修改和区间查询的数据结构
+
+为此我们需要寻找一些特殊的区间,并更新区间的信息
+
+为了避免每次更新退化到 $O(n)$ ,我们可以使用lazy标记优化区间更新过程,这样可以达到 $O(logn)$
+
+证明的话可以从LCA角度然后缩点思考
 
 
-##  Lazy线段树
+##  Lazy
 
-> C++板子源自pecco
+下面是一个很基本的模板
+
+其中我喜欢把标记数组记作`todo`
+
+其中`_do`用于处理标记,`_down`用于下传标记,`_up`用于维护树的信息上传
+
+一般只需要修改这三个函数以及查询函数即可
+
+另外一般我们会对有todo的区间节点依然加上todo影响的值,这样查询的时候就不用额外处理下标
 
 :::code-group
 
 ```cpp
-#include <bits/stdc++.h>
-using namespace std;
-using ll = long long;
-const int MAXN = 1e5 + 5;
-ll tree[MAXN << 2], mark[MAXN << 2], n, m, A[MAXN];
-void push_down(int p, int len)
+int val[N];
+int node[N << 2], todo[N << 2];
+
+void _do(int p, int size, int v)
 {
-    if (len <= 1) return;
-    tree[p << 1] += mark[p] * (len - len / 2);
-    mark[p << 1] += mark[p];
-    tree[p << 1 | 1] += mark[p] * (len / 2);
-    mark[p << 1 | 1] += mark[p];
-    mark[p] = 0;
+    node[p] += v * size;
+    todo[p] += v;
 }
-void build(int p = 1, int cl = 1, int cr = n)
+
+void _down(int p, int l, int r)
 {
-    if (cl == cr) return void(tree[p] = A[cl]);
-    int mid = (cl + cr) >> 1;
-    build(p << 1, cl, mid);
-    build(p << 1 | 1, mid + 1, cr);
-    tree[p] = tree[p << 1] + tree[p << 1 | 1];
+    if (l >= r)
+        return;
+    int size = r - l + 1;
+    _do(p * 2, size - size / 2, todo[p]);
+    _do(p * 2 + 1, size / 2, todo[p]);
+    todo[p] = 0;
 }
-ll query(int l, int r, int p = 1, int cl = 1, int cr = n)
+
+void _up(int p)
 {
-    if (cl >= l && cr <= r) return tree[p];
-    push_down(p, cr - cl + 1);
-    ll mid = (cl + cr) >> 1, ans = 0;
-    if (mid >= l) ans += query(l, r, p << 1, cl, mid);
-    if (mid < r) ans += query(l, r, p << 1 | 1, mid + 1, cr);
-    return ans;
+    node[p] = node[p * 2] + node[p * 2 + 1];
 }
-void update(int l, int r, int d, int p = 1, int cl = 1, int cr = n)
+
+void build(int p, int l, int r)
 {
-    if (cl >= l && cr <= r) return void(tree[p] += d * (cr - cl + 1), mark[p] += d);
-    push_down(p, cr - cl + 1);
-    int mid = (cl + cr) >> 1;
-    if (mid >= l) update(l, r, d, p << 1, cl, mid);
-    if (mid < r) update(l, r, d, p << 1 | 1, mid + 1, cr);
-    tree[p] = tree[p << 1] + tree[p << 1 | 1];
-}
-int main()
-{
-    ios::sync_with_stdio(false);
-    cin >> n >> m;
-    for (int i = 1; i <= n; ++i)
-        cin >> A[i];
-    build();
-    while (m--)
+    if (l == r)
     {
-        int o, l, r, d;
-        cin >> o >> l >> r;
-        if (o == 1)
-            cin >> d, update(l, r, d);
-        else
-            cout << query(l, r) << '\n';
+        node[p] = val[l];
+        return;
     }
-    return 0;
+    int mid = (l + r) >> 1;
+    build(p * 2, l, mid);
+    build(p * 2 + 1, mid + 1, r);
+    _up(p);
+}
+
+void update(int p, int l, int r, int L, int R, int v)
+{
+    if (L <= l and r <= R)
+    {
+        _do(p, r - l + 1, v);
+        return;
+    }
+    int mid = (l + r) >> 1;
+    _down(p, l, r);
+    if (mid >= L)
+        update(p * 2, l, mid, L, R, v);
+    if (mid < R)
+        update(p * 2 + 1, mid + 1, r, L, R, v);
+    _up(p);
+}
+
+i64 query(int p, int l, int r, int L, int R)
+{
+    if (L <= l and r <= R)
+    {
+        return node[p];
+    }
+    _down(p, l, r);
+    i64 ans = 0;
+    int mid = (l + r) >> 1;
+    if (mid >= L)
+        ans += query(p * 2, l, mid, L, R);
+    if (mid < R)
+        ans += query(p * 2 + 1, mid + 1, r, L, R);
+    return ans;
 }
 ```
 
 ```py
+# 我早期的线段树码风,可能和现在的cpp版本不一致
 from math import ceil
 MAXN=10**5+5
 tree=[0 for _ in range(MAXN<<2)]
@@ -116,101 +141,3 @@ def update(l,r,val,p=1,cl=1,cr=n):
 ```
 
 :::
-
-## 动态开点线段树
-
-```cpp
-// MAXV一般能开多大开多大，例如内存限制128M时可以开到八百万左右
-#define ls(x) tree[x].ls
-#define rs(x) tree[x].rs
-#define val(x) tree[x].val
-#define mark(x) tree[x].mark
-const int MAXV = 8e6;
-int L = 1, R = 1e5, cnt = 1;
-struct node
-{
-    ll val, mark;
-    int ls, rs;
-} tree[MAXV];
-void upd(int &p, int x, int len)
-{
-    if (!p) p = ++cnt;
-    val(p) += x * len;
-    mark(p) += x;
-}
-void push_down(int p, int len)
-{
-    if (len <= 1) return;
-    upd(ls(p), mark(p), len - len / 2);
-    upd(rs(p), mark(p), len / 2);
-    mark(p) = 0;
-}
-ll query(int l, int r, int p = 1, int cl = L, int cr = R)
-{
-    if (cl >= l && cr <= r) return val(p);
-    push_down(p, cr - cl + 1);
-    ll mid = (cl + cr - 1) / 2, ans = 0;
-    if (mid >= l) ans += query(l, r, ls(p), cl, mid);
-    if (mid < r) ans += query(l, r, rs(p), mid + 1, cr);
-    return ans;
-}
-void update(int l, int r, int d, int p = 1, int cl = L, int cr = R)
-{
-    if (cl >= l && cr <= r) return (void)(val(p) += d * (cr - cl + 1), mark(p) += d);
-    push_down(p, cr - cl + 1);
-    int mid = (cl + cr - 1) / 2;
-    if (mid >= l) update(l, r, d, ls(p), cl, mid);
-    if (mid < r) update(l, r, d, rs(p), mid + 1, cr);
-    val(p) = val(ls(p)) + val(rs(p));
-}
-```
-
-## 权值线段树
-
-维护频数数组的线段树
-
-我们可以用它来模拟平衡树
-
-```cpp
-void insert(int v) // 插入
-{
-    update(v, 1);
-}
-void remove(int v) // 删除
-{
-    update(v, -1);
-}
-int countl(int v)
-{
-    return query(L, v - 1);
-}
-int countg(int v)
-{
-    return query(v + 1, R);
-}
-int rank(int v) // 求排名
-{
-    return countl(v) + 1;
-}
-int kth(int k, int p = 1, int cl = L, int cr = R) // 求指定排名的数
-{
-    if (cl == cr)
-        return cl;
-    int mid = (cl + cr - 1) / 2;
-    if (val(ls(p)) >= k)
-        return kth(k, ls(p), cl, mid); // 往左搜
-    else
-        return kth(k - val(ls(p)), rs(p), mid + 1, cr); // 往右搜
-}
-int pre(int v) // 求前驱
-{
-    int r = countl(v);
-    return kth(r);
-}
-int suc(int v) // 求后继
-{
-    int r = val(1) - countg(v) + 1;
-    return kth(r);
-}
-```
-

@@ -79,9 +79,9 @@ const int MOD = 1e9 + 7;
 int val[N];
 int node[N << 2], todo[N << 2];
 
-void _do(int p, int l, int r, int v)
+void _do(int p, int size, int v)
 {
-    node[p] += v * (r - l + 1);
+    node[p] += v * size;
     todo[p] += v;
 }
 
@@ -90,10 +90,8 @@ void _down(int p, int l, int r)
     if (l >= r)
         return;
     int size = r - l + 1;
-    todo[p * 2] += todo[p];
-    node[p * 2] += todo[p] * (size - size / 2);
-    todo[p * 2 + 1] += todo[p];
-    node[p * 2 + 1] += todo[p] * (size / 2);
+    _do(p * 2, size - size / 2, todo[p]);
+    _do(p * 2 + 1, size / 2, todo[p]);
     todo[p] = 0;
 }
 
@@ -119,7 +117,7 @@ void update(int p, int l, int r, int L, int R, int v)
 {
     if (L <= l and r <= R)
     {
-        _do(p, l, r, v);
+        _do(p, r - l + 1, v);
         return;
     }
     int mid = (l + r) >> 1;
