@@ -15,3 +15,5 @@ code/Others/*/
 .vscode/
 .vscode/settings.json
 code/**/.cph
+code/trick.md
+code/luogu/P3373[线段树].cpp

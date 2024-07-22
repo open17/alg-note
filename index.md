@@ -2,9 +2,9 @@
 layout: home
 
 hero:
-  name: "Alg Note"
-  text: "我的算法竞赛练习,笔记与模板"
-  tagline: By open17
+  name: "导航页"
+  text: "Alg Note"
+  tagline: 我的CP模板与笔记
   actions:
     - theme: brand
       text: 查看模板
@@ -14,47 +14,53 @@ hero:
       link: /page/problems
   image: "https://cdn.jsdelivr.net/gh/open17/Pic/img/202406150027870.png"
 
-# bgImg: "https://cdn.jsdelivr.net/gh/open17/Pic/img/202404020238396.png"
-# bgImgDark: 'https://cdn.jsdelivr.net/gh/open17/Pic/img/202403302340940.png'
-
-
 features:
-  - title: 算法
-    icon: 
-      src:  https://cdn.jsdelivr.net/gh/open17/Pic/img/202406140215526.svg
-    details: "基础算法与思想,包括倍增,二分,贪心,双指针,前缀和,差分..."
-    link: "/template/1-Alg/"
+  - title: Atcoder
+    icon: 🦆
+    details: "只会ABC的ABC"
+    link: "https://atcoder.jp/"
     linkText: "点击跳转"
-  - title: 数据结构
-    details: "常用数据结构,包含树状数组,线段树,平衡树,ST表..."
-    link: "/template/2-DS/"
+  - title: 洛谷
+    icon: 🐳
+    details: "模板与经典题的练习"
+    link: "https://www.luogu.com.cn/"
     linkText: "点击跳转"
-    icon: 
-      src:  https://cdn.jsdelivr.net/gh/open17/Pic/img/202406140214331.svg
-  - title: 图论
-    details: "基本图论算法与数据结构,例如最短路,最小生成树,联通分量,并查集..."
-    link: "/template/3-Graph/"
+  - title: CodeForces
+    icon: 🫠
+    details: "代码力量"
+    link: "https://huxulm.github.io/lc-rating/"
     linkText: "点击跳转"
-    icon: 
-      src:  https://cdn.jsdelivr.net/gh/open17/Pic/img/202406140211170.svg
-  - title: 字符串
-    details: "非常基本的字符串板子,包括字典树,字符串哈希,KMP,SA..."
-    link: "/template/4-String/"
+  - title: 杭电多校
+    icon: 💊
+    details: "全靠队友发力了"
+    link: "https://acm.hdu.edu.cn/contests/contest_list.php"
     linkText: "点击跳转"
-    icon: 
-      src:  https://cdn.jsdelivr.net/gh/open17/Pic/img/202406140212394.svg
-  - title: 数学
-    details: "比较偏向基础数论,包括扩展欧几里得,数论分块,裴蜀定理,费马小定理,逆元..."
-    link: "/template/5-Math/"
+  - title: 牛客
+    icon: 🐮
+    details: "牛校出牛子"
+    link: "https://ac.nowcoder.com/"
     linkText: "点击跳转"
-    icon: 
-      src:  https://cdn.jsdelivr.net/gh/open17/Pic/img/202406140215742.svg
-  - title: 动态规划
-    details: "最喜欢的一集,从@擦车开始,再到线性,背包,区间,数位..."
-    link: "/template/6-DP/"
+  - title: Leetcode
+    icon: 🦩
+    details: "喜欢我的unrated吗?"
+    link: "https://leetcode.cn/contest/"
     linkText: "点击跳转"
-    icon: 
-      src:  https://cdn.jsdelivr.net/gh/open17/Pic/img/202406140211450.svg
+  - title: 灵茶
+    icon: 🍵
+    details: "0x3f的试炼题单"
+    link: "https://docs.qq.com/sheet/DWGFoRGVZRmxNaXFz?tab=BB08J2"
+    linkText: "点击跳转"
+  - title: 羊蹄
+    icon: 🐑
+    details: "小羊的每日两题"
+    link: "https://github.com/Yawn-Sean/Daily_CF_Problems"
+    linkText: "点击跳转"
+   
+  - title: 力扣题单辅助
+    icon: 🥇
+    details: "很好的网站,使我的大脑旋转"
+    link: "https://huxulm.github.io/lc-rating/"
+    linkText: "点击跳转"
     
 ---
 
