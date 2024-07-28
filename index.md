@@ -3,12 +3,12 @@ layout: home
 
 hero:
   name: "导航页"
-  text: "Alg Note"
+  #text: "Alg Note"
   tagline: 我的CP模板与笔记
   actions:
     - theme: brand
       text: 查看模板
-      link: /template/0-Intro/IO
+      link: /template/0-Intro/
     - theme: alt
       text: 练习题库
       link: /page/problems

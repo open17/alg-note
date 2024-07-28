@@ -1,5 +1,11 @@
 # 快速幂
 
+## 什么是?
+
+基于倍增的算法
+
+## 实现
+
 ```cpp
 int qpow(int a,int b,int p){
     a%=p;
@@ -12,4 +18,3 @@ int qpow(int a,int b,int p){
     return ans;
 }
 ```
-

@@ -1,4 +1,4 @@
-# 二进制集合技巧
+# 位运算
 
 :::info 参考来源
 [0x3f的分享](https://leetcode.cn/circle/discuss/CaOJ45/)
