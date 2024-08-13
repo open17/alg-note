@@ -60,8 +60,9 @@ using namespace std;
 #define rep(i, l, r) for (int i = (l); i < (r); i++)
 #define _rep(i, l, r) for (int i = (l); i >= (r); i--)
 #define all(x) (x).begin(), x.end()
-#define inf 0x3f3f3f3f
 #define endl '\n'  // 避免刷新缓冲区
+#define inf32 0x3f3f3f3f
+#define max32 INT_MAX
 
 
 // 类型别名

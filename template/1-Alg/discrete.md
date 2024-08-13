@@ -17,11 +17,24 @@
 :::code-group
 
 ```cpp
-ranges::sort(s);
-s.erase(unique(s.begin(),s.end()),s.end());
-
-auto get=[&s](int v) -> int {
-    return ranges::lower_bound(s, x) - s.begin() + 1
+template <typename T>
+struct Discrete{
+    vector<T> arr;
+    Discrete(){}
+    Discrete(vector<T> &arr){
+        this->arr=arr;
+        clear();
+    }
+    void add(T val){
+        arr.push_back(val);
+    }
+    void clear(){
+        sort(arr.begin(),arr.end());
+        arr.erase(unique(arr.begin(),arr.end()),arr.end());
+    }
+    T get(T v){
+        return lower_bound(arr.begin(),arr.end(),v)-arr.begin();
+    }
 };
 ```
 

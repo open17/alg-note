@@ -13,21 +13,46 @@
 :::code-group
 
 ```cpp
-int lowbit(int x){return x&(-x);}
-void add(int i,int v,int n){
-    while(i<n){
-        tree[i]+=v;
-        i+=lowbit(i);
+template <typename T>
+struct Fenwick {
+    int n;
+    std::vector<T> a;
+    Fenwick(int n_ = 0) {
+        init(n_);
     }
-}
-int query(int i){
-    int ans=0;
-    while(i>0){
-        ans+=tree[i];
-        i-=lowbit(i);
+    void init(int n_) {
+        n = n_;
+        a.assign(n, T{});
     }
-    return ans;
-}
+    void add(int i, const T &v) {
+        while(i<n) {
+            a[i]+=v;
+            i+=i&-i;
+        }
+    }
+    T get(int i) {
+        T ans{};
+        while(i>0){
+            ans+=a[i];
+            i-=i&-i;
+        }
+        return ans;
+    }
+    T range(int l, int r) {
+        return get(r)-get(l-1);
+    }
+    int selectKth(const T &k) {
+        int x = 0;
+        T cur{};
+        for (int i = 1 << std::__lg(n); i; i /= 2) {
+            if (x + i <= n && cur + a[x + i - 1] <= k) {
+                x += i;
+                cur = cur + a[x - 1];
+            }
+        }
+        return x;
+    }
+};
 ```
 
 ```py
