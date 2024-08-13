@@ -30,6 +30,7 @@
  *          使用STD
  *          重复数据读入
  *          int强制转ll
+ *          重载工具函数
  *          启用debug输出
  *          关闭输入同步流
  *          使用文件输入流
@@ -40,6 +41,7 @@
 #define USE_STD
 #define USE_LL
 #define REAP_READ
+#define USE_TOOL
 // #define USE_DEBUG
 // #define USE_IOS
 // #define IN_FILE "data.in"
@@ -54,10 +56,9 @@ using namespace std;
 #define int long long
 #endif
 
-
 // 辅助宏
 #define rep(i, l, r) for (int i = (l); i < (r); i++)
-#define _rep(i, l, r) for (int i = (l); i < (r); i++)
+#define _rep(i, l, r) for (int i = (l); i >= (r); i--)
 #define all(x) (x).begin(), x.end()
 #define inf 0x3f3f3f3f
 #define endl '\n'  // 避免刷新缓冲区
@@ -66,8 +67,8 @@ using namespace std;
 // 类型别名
 using i64 = long long;
 using u64 = unsigned long long;
+using i128 = __int128;
 using pii = std::pair<int, int>;
-
 
 // 常规输出
 template <typename T> void print(const T &t) { std::cout << t << endl; }
@@ -90,6 +91,35 @@ template <typename T, typename... Args> void debug(const T &t, const Args... arg
     debug(args...);
     #endif
 }
+
+#ifdef USE_TOOL
+i64 ceilDiv(i64 n, i64 m) {
+    if (n >= 0) {
+        return (n + m - 1) / m;
+    } else {
+        return n / m;
+    }
+}
+ 
+i64 floorDiv(i64 n, i64 m) {
+    if (n >= 0) {
+        return n / m;
+    } else {
+        return (n - m + 1) / m;
+    }
+}
+
+template<class T>
+void chmax(T &a, T b) {
+    if (a < b) {
+        a = b;
+    }
+}
+
+i128 gcd(i128 a, i128 b) {
+    return b ? gcd(b, a % b) : a;
+}
+#endif
 
 // 快读快写
 int read();
