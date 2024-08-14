@@ -11,7 +11,7 @@
 - [auto](https://github.com/open17/alg-note/tree/vitepress/auto): 一些自动化,包括自动化目录更新,CF打卡仓库自动推送等
 - 其他,vitepress站点配置与页面
 
-## 🩵 在线查看
+## 在线查看
 
 - [首页](https://alg.open17.vip/)
 - [算法模板](https://alg.open17.vip/template/0-Intro/IO.html)

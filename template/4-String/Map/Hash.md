@@ -6,12 +6,52 @@
 
 $$f(s) = \sum_{i=1}^{l} s[i] \times b^{l-i} \pmod M$$
 
+我们可以通过该函数将字符串映射为b进制下的数字
+
+同时我们可以预处理储存所有的前缀，然后便可以$O(1)$得到任意子串的Hash值
 
 ## 模板
 
 :::code-group
 
 ```cpp
+struct StrHash{
+    int MOD,BASE,n;
+    vector<int> p,h;
+    StrHash(int n_=0){
+        randing();
+        init(n_);
+    }
+    StrHash(string s){
+        randing();
+        init(s.size());
+        work(s);
+    }
+    void init(int n_){
+        n=n_+1;
+        p.assign(n, int{});
+        h.assign(n, int{});
+        p[0]=1;
+        h[0]=0;
+    }
+    void randing(){
+        srand(time(0));
+        MOD = 998244353 + rand() % 10008;
+        BASE = 33 + rand() % 234;
+    }
+    void work(string s){
+        for(int i=1;i<n;i++){
+            p[i] = ((long long)p[i - 1] * BASE) % MOD; 
+            h[i]=((long long)h[i-1]*BASE+s[i-1]-'a')%MOD;
+        }
+    }
+    int get(int l,int r){
+        return (h[r] - (long long) h[l-1] * p[r-l+1] % MOD + MOD) % MOD;
+    }
+};
+```
+
+```cpp [cpp未封装版]
 int p[N];
 int h[N];
 

@@ -60,7 +60,9 @@ struct Presum{
 
 ```py
 from itertools import accumulate
-b = list(accumulate(a, initial=0))
+
+def presum(a):
+    return list(accumulate(a, initial=0))
 
 def update(l,r):
     b[l]+=c
@@ -75,14 +77,67 @@ def update(l,r):
 
 :::code-group
 
-```cpp
+```cpp 
+template <typename T>
+struct Presum2D {
+    vector<vector<T>> a;
+    int n,m;
+    Presum2D(int n_=0,int m_=0){
+       init(n_,m_);
+    }
+    Presum2D(vector<vector<T>> &b){
+        presum(b);
+    }
+    void presum(vector<vector<T>> &b){
+        init(b.size(),b[0].size());
+        for(int i=1;i<n;i++)
+        {
+            for(int j=1;j<m;j++)
+            {
+                a[i][j] = b[i-1][j-1];
+                a[i][j] += a[i - 1][j] + a[i][j - 1] - a[i - 1][j - 1];
+            }
+        }
+    }
+    void init(int n_,int m_) {
+        n=n_+1;
+        m=m_+1;
+        a.resize(n);
+        for(int i=0;i<n;i++){
+            a[i].assign(m, T{});
+        }
+    }
+    T sum(){
+        for(int i=1;i<n;i++)
+        {
+            for(int j=1;j<m;j++)
+            {
+                a[i][j] += a[i - 1][j] + a[i][j - 1] - a[i - 1][j - 1];
+            }
+        }
+    }
+    T get(int x1, int y1, int x2, int y2){
+        return a[x2][y2] - a[x1 - 1][y2] - a[x2][y1 - 1] + a[x1 - 1][y1 - 1];
+    }
+    void add(int x1,int y1,int x2, int y2, const T &v){
+        x2++;
+        y2++;
+        a[x1][y1]+=v;
+        a[x2][y1]-=v;
+        a[x1][y2]-=v;
+        a[x2][y2]+=v;
+    }
+};
+```
+
+```cpp [cpp未封装版]
 const int N = 150;
 int a[N][N];
 
 int get(int x1, int y1, int x2, int y2)
 {
     return a[x2][y2] - a[x1 - 1][y2] - a[x2][y1 - 1] + a[x1 - 1][y1 - 1];
-};
+}
 
 int n = read();
 memset(a, 0, sizeof(a));
