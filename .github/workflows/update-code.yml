@@ -26,6 +26,7 @@ jobs:
       - name: Commit and push changes
         run: |
           if ! git diff --quiet; then
+            echo "TRY PUSH"
             git config --local user.email "action@github.com"
             git config --local user.name "GitHub Action"
             git add .
