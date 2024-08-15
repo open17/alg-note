@@ -18,6 +18,8 @@ jobs:
         run: |
           git clone https://github.com/open17/code-alg.git
           ls
+          cd code-alg
+          rm -r .git
 
       - name: Commit and push changes
         run: |
