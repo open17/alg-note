@@ -20,6 +20,8 @@ jobs:
           ls
           cd code-alg
           rm -r .git
+          cd ..
+          ls
 
       - name: Commit and push changes
         run: |
@@ -29,5 +31,5 @@ jobs:
             git add .
             git commit -m "自动更新题库"
             git pull
-            git push https://open17@github.com/open17/alg-note.git HEAD:vitepress
+            git push https://open17@github.com/open17/alg-note.git HEAD:product
           fi
