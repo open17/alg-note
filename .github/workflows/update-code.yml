@@ -18,11 +18,8 @@ jobs:
         run: |
           git clone https://github.com/open17/code-alg.git
           cd code-alg
-          ls -a
-          echo "---"
           rm -r .git
           echo `date +"%Y-%m-%d %H:%M:%S"` > update.txt
-          ls -a
           cd ..
 
       - name: Commit and push changes
