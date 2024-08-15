@@ -17,6 +17,7 @@ jobs:
       - name: Update code 
         run: |
           git clone https://github.com/open17/code-alg.git
+          ls
 
       - name: Commit and push changes
         run: |
