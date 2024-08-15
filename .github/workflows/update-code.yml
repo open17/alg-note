@@ -23,6 +23,7 @@ jobs:
           rm -r .git
           echo `date +"%Y-%m-%d %H:%M:%S"` > update.txt
           ls -a
+          cd ..
 
       - name: Commit and push changes
         run: |
