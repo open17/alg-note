@@ -1,0 +1,30 @@
+name: Update code
+
+on:
+  push:
+    branches: vitepress
+  
+permissions: write-all
+
+jobs:
+  get-problems:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Update code 
+        run: |
+          git clone https://github.com/open17/code-alg.git
+
+      - name: Commit and push changes
+        run: |
+          if ! git diff --quiet; then
+            git config --local user.email "action@github.com"
+            git config --local user.name "GitHub Action"
+            git add .
+            git commit -m "自动更新题库"
+            git pull
+            git push https://open17@github.com/open17/alg-note.git HEAD:vitepress
+          fi
