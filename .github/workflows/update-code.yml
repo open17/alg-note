@@ -18,6 +18,7 @@ jobs:
         run: |
           git clone https://github.com/open17/code-alg.git
           cd code-alg
+          ls
           rm -r .git
           echo `date +"%Y-%m-%d %H:%M:%S"` > update.txt
           ls
