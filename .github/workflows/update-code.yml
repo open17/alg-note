@@ -27,12 +27,10 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          if ! git diff --quiet; then
-            echo "TRY PUSH"
-            git config --local user.email "action@github.com"
-            git config --local user.name "GitHub Action"
-            git add .
-            git commit -m "自动更新题库"
-            git pull
-            git push https://open17@github.com/open17/alg-note.git HEAD:product
-          fi
+          echo "TRY PUSH"
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "自动更新题库"
+          git pull
+          git push https://open17@github.com/open17/alg-note.git -f HEAD:product
