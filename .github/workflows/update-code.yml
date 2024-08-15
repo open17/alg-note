@@ -17,10 +17,9 @@ jobs:
       - name: Update code 
         run: |
           git clone https://github.com/open17/code-alg.git
-          ls
           cd code-alg
           rm -r .git
-          cd ..
+          echo `date +"%Y-%m-%d %H:%M:%S"` > update.txt
           ls
 
       - name: Commit and push changes
