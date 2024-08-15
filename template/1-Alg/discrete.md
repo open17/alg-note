@@ -22,6 +22,9 @@ struct Discrete{
     vector<T> arr;
     Discrete(){}
     Discrete(vector<T> &arr){
+        init(arr);
+    }
+    void init(vector<T> &arr){
         this->arr=arr;
         clear();
     }
