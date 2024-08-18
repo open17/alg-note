@@ -2,8 +2,7 @@
 layout: home
 
 hero:
-  name: "导航页"
-  #text: "Alg Note"
+  name: "Alg Note"
   tagline: 我的CP模板与笔记
   actions:
     - theme: brand
@@ -12,7 +11,7 @@ hero:
     - theme: alt
       text: 练习题库
       link: /page/problems
-  image: "https://cdn.jsdelivr.net/gh/open17/Pic/img/202406150027870.png"
+  image: "/logo3.png"
 
 features:
   - title: Atcoder
