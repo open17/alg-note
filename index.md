@@ -30,21 +30,6 @@ features:
     details: "代码力量"
     link: "https://huxulm.github.io/lc-rating/"
     linkText: "点击跳转"
-  - title: 杭电多校
-    icon: 💊
-    details: "全靠队友发力了"
-    link: "https://acm.hdu.edu.cn/contests/contest_list.php"
-    linkText: "点击跳转"
-  - title: 牛客
-    icon: 🐮
-    details: "牛校出牛子"
-    link: "https://ac.nowcoder.com/"
-    linkText: "点击跳转"
-  - title: Leetcode
-    icon: 🦩
-    details: "喜欢我的unrated吗?"
-    link: "https://leetcode.cn/contest/"
-    linkText: "点击跳转"
   - title: 灵茶
     icon: 🍵
     details: "0x3f的试炼题单"
