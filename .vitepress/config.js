@@ -43,12 +43,12 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '模板', link: '/template/0-Intro/' },
-      { text: '题库', link: '/page/problems' },
+      { text: '题库', link: 'website/page/problems' },
 
       {
         text: "更多",
         items: [
-          { text: '在线运行', link: '/page/playground' },
+          { text: '在线运行', link: 'website/page/playground' },
           {
             text: "算法博客",
             link: "https://open17.vip"

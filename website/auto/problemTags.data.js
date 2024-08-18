@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 export default {
-    watch: ['../code/**/*.py', '../code/**/*.cpp'],
+    watch: ['../../code/**/*.py', '../../code/**/*.cpp'],
     load(watchedFiles) {
         const problems = [];
         const allTags = new Set();
