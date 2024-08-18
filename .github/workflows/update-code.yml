@@ -3,6 +3,8 @@ name: Update code
 on:
   push:
     branches: vitepress
+  schedule:
+    - cron: '0 10 * * *'
   
 permissions: write-all
 
