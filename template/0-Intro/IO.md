@@ -62,6 +62,7 @@ using namespace std;
 #define all(x) (x).begin(), x.end()
 #define endl '\n'  // 避免刷新缓冲区
 #define inf32 0x3f3f3f3f
+#define inf64 1LL << 60
 #define max32 INT_MAX
 
 
@@ -117,7 +118,18 @@ void chmax(T &a, T b) {
     }
 }
 
-i128 gcd(i128 a, i128 b) {
+template <class T>
+void chmin(T &a, T b)
+{
+    if (a > b)
+    {
+        a = b;
+    }
+}
+
+
+template <class T>
+T gcd(T a, T b) {
     return b ? gcd(b, a % b) : a;
 }
 #endif
