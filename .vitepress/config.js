@@ -32,7 +32,7 @@ export default defineConfig({
       md.use(markdownItFootnote)
     }
   },
-  head: [['link', { rel: 'icon', href: '/logo.png' }]],
+  head: [['link', { rel: 'icon', href: '/logo2.png' }]],
   themeConfig: {
     sidebar: generateSidebar(vitepressSidebarOptions),
     siteTitle: false,
