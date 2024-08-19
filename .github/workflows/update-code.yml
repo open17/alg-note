@@ -18,8 +18,8 @@ jobs:
 
       - name: Update code 
         run: |
-          git clone https://github.com/open17/code-alg.git
-          cd code-alg
+          git clonehttps://github.com/open17/CompetitiveProgramming.git
+          cd CompetitiveProgramming
           rm -r .git
           echo `date +"%Y-%m-%d %H:%M:%S"` > update.txt
           cd ..
